@@ -1,6 +1,7 @@
 import './bootstrap';
 import '../css/app.css';
 import '../scss/corporate-ui-dashboard.scss';
+import '../fonts/tajawal.css'
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
@@ -9,6 +10,8 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import i18n from './i18n.js'
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+
+// import.meta.glob(['../images/**'])
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
