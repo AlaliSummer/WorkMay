@@ -14,6 +14,15 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/auth/redirect', function () {
+    return Socialite::driver('google')->redirect();
+});
+
+Route::get('/auth/callback', function () {
+    $user = Socialite::driver('google')->user();
+
+    // $user->token
+});
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
