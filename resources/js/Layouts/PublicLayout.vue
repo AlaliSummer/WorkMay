@@ -24,9 +24,9 @@ const logout = () => {
     <div>
         <Head :title="title" />
             <!-- Page Content -->
-            <Navbar></Navbar>
-            <main>
-                <slot />
-            </main>
+        <Navbar></Navbar>
+        <main>
+            <slot />
+        </main>
     </div>
 </template>

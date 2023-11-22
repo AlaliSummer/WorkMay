@@ -12,6 +12,8 @@ export default {
         './resources/js/**/*.vue',
     ],
 
+    prefix: 'tw-',
+
     theme: {
         extend: {
             fontFamily: {

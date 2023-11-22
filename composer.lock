@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a66d916934390158098364345e79a8ee",
+    "content-hash": "a56ab5ea5e1c5425c8cbe8b351e2648b",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1145,6 +1145,64 @@
                 }
             ],
             "time": "2023-10-27T10:59:02+00:00"
+        },
+        {
+            "name": "laraeast/laravel-vue-i18n-generator",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laraeast/laravel-vue-i18n-generator.git",
+                "reference": "b1593f7849bd90c381dd09199fd81a00e1cbcb4b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laraeast/laravel-vue-i18n-generator/zipball/b1593f7849bd90c381dd09199fd81a00e1cbcb4b",
+                "reference": "b1593f7849bd90c381dd09199fd81a00e1cbcb4b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "illuminate/console": ">=5.1",
+                "illuminate/support": ">=5.1",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laraeast\\VueInternationalizationGenerator\\GeneratorProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laraeast\\VueInternationalizationGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Lindhe",
+                    "email": "martin@ubique.se"
+                }
+            ],
+            "description": "Generates a vue-i18n compatible include file from your Laravel translations.",
+            "homepage": "http://github.com/laraeast/laravel-vue-i18n-generator",
+            "keywords": [
+                "laravel",
+                "vue-i18n"
+            ],
+            "support": {
+                "source": "https://github.com/laraeast/laravel-vue-i18n-generator/tree/v3.0.0"
+            },
+            "time": "2023-03-03T21:24:58+00:00"
         },
         {
             "name": "laravel/fortify",
