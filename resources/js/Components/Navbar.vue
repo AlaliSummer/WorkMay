@@ -31,39 +31,40 @@ const logout = () => {
 <template>
     <nav class="tw-bg-white tw-border-b tw-border-gray-100">
                 <!-- Primary Navigation Menu -->
-                <div class="tw-max-w-7xl tw-mx-auto tw-px-4 tw-sm:px-6 tw-lg:px-8">
+                <div class="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8">
                     <div class="tw-flex tw-justify-between tw-h-16">
                         <div class="tw-flex">
                             <!-- Logo -->
                             <div class="tw-shrink-0 tw-flex tw-items-center">
-                                <Link :href="route('dashboard')">
+                                <Link :href="'/'">
                                     <ApplicationMark class="tw-block tw-h-9 tw-w-auto" />
                                 </Link>
                             </div>
 
                             <!-- Navigation Links -->
-                            <div class="tw-hidden tw-space-x-8 tw-sm:-my-px tw-sm:ms-10 tw-sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                            <div class="tw-hidden tw-space-x-8 sm:tw--my-px sm:tw-ms-10 sm:tw-flex">
+                                <div></div>
+                                <NavLink :href="'/'" :active="route().current('home')">
+                                    {{ $t('words.home') }}
                                 </NavLink>
                             </div>
                         </div>
 
-                        <div class="tw-hidden tw-sm:flex tw-sm:items-center tw-sm:ms-6" v-if="$page.props.auth.user">
+                        <div class="tw-hidden sm:tw-flex sm:tw-items-center sm:tw-ms-6" v-if="$page.props.auth.user">
                             <!-- Settings Dropdown -->
-                            <div class="ms-3 relative">
+                            <div class="tw-ms-3 tw-relative">
                                 <Dropdown align="right" width="48">
                                     <template #trigger>
-                                        <button v-if="$page.props.jetstream.managesProfilePhotos" class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                            <img class="h-8 w-8 rounded-full object-cover" :src="$page.props.auth.user.profile_photo_url" :alt="$page.props.auth.user.name">
-                                            <img class="h-8 w-8 rounded-full object-cover" src="" alt="guest">
+                                        <button v-if="$page.props.jetstream.managesProfilePhotos" class="tw-flex tw-text-sm tw-border-2 tw-border-transparent tw-rounded-full focus:tw-outline-none focus:tw-border-gray-300 tw-transition">
+                                            <img class="tw-h-8 w-8 tw-rounded-full tw-object-cover" :src="$page.props.auth.user.profile_photo_url" :alt="$page.props.auth.user.name">
+                                            <img class="tw-h-8 w-8 tw-rounded-full tw-object-cover" src="" alt="guest">
                                         </button>
 
-                                        <span v-else class="inline-flex rounded-md">
-                                            <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150">
+                                        <span v-else class="tw-inline-flex tw-rounded-md">
+                                            <button type="button" class="tw-inline-flex tw-items-center tw-px-3 tw-py-2 tw-border tw-border-transparent tw-text-sm tw-leading-4 tw-font-medium tw-rounded-md tw-text-gray-500 tw-bg-white hover:tw-text-gray-700 focus:tw-outline-none focus:tw-bg-gray-50 active:tw-bg-gray-50 tw-transition tw-ease-in-out tw-duration-150">
                                                 {{ $page.props.auth.user.name }}
 
-                                                <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                <svg class="tw-ms-2 tw--me-0.5 tw-h-4 tw-w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                                 </svg>
                                             </button>
@@ -72,7 +73,7 @@ const logout = () => {
 
                                     <template #content>
                                         <!-- Account Management -->
-                                        <div class="block px-4 py-2 text-xs text-gray-400">
+                                        <div class="tw-block tw-px-4 tw-py-2 tw-text-xs tw-text-gray-400">
                                             Manage Account
                                         </div>
 
@@ -84,7 +85,7 @@ const logout = () => {
                                             API Tokens
                                         </DropdownLink>
 
-                                        <div class="border-t border-gray-200" />
+                                        <div class="tw-border-t tw-border-gray-200" />
 
                                         <!-- Authentication -->
                                         <form @submit.prevent="logout">
@@ -98,8 +99,8 @@ const logout = () => {
                         </div>
 
                         <!-- Hamburger -->
-                        <div class="tw--me-2 tw-flex tw-items-center tw-sm:hidden">
-                            <button class="tw-inline-flex tw-items-center tw-justify-center tw-p-2 tw-rounded-md tw-text-gray-400 tw-hover:text-gray-500 tw-hover:bg-gray-100 tw-focus:outline-none tw-focus:bg-gray-100 tw-focus:text-gray-500 tw-transition tw-duration-150 tw-ease-in-out" @click="showingNavigationDropdown = ! showingNavigationDropdown">
+                        <div class="tw--me-2 tw-flex tw-items-center sm:tw-hidden">
+                            <button class="tw-inline-flex tw-items-center tw-justify-center tw-p-2 tw-rounded-md tw-text-gray-400 hover:tw-text-gray-500 hover:tw-bg-gray-100 focus:tw-outline-none focus:tw-bg-gray-100 focus:tw-text-gray-500 tw-transition tw-duration-150 tw-ease-in-out" @click="showingNavigationDropdown = ! showingNavigationDropdown">
                                 <svg
                                     class="tw-h-6 tw-w-6"
                                     stroke="currentColor"
@@ -127,7 +128,7 @@ const logout = () => {
                 </div>
 
                 <!-- Responsive Navigation Menu -->
-                <div :class="{'tw-block': showingNavigationDropdown, 'tw-hidden': ! showingNavigationDropdown}" class="tw-sm:hidden">
+                <div :class="{'tw-block': showingNavigationDropdown, 'tw-hidden': ! showingNavigationDropdown}" class="sm:tw-hidden">
                     <div class="tw-pt-2 tw-pb-3 tw-space-y-1">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             {{ $t('words.home') }}
@@ -136,22 +137,22 @@ const logout = () => {
 
                     <!-- Responsive Settings Options -->
                     <div class="tw-pt-4 tw-pb-1 tw-border-t tw-border-gray-200" v-if="$page.props.auth.user">
-                        <div class="flex items-center px-4">
-                            <div v-if="$page.props.jetstream.managesProfilePhotos" class="shrink-0 me-3">
-                                <img class="h-10 w-10 rounded-full object-cover" :src="$page.props.auth.user.profile_photo_url" :alt="$page.props.auth.user.name">
+                        <div class="tw-flex tw-items-center tw-px-4">
+                            <div v-if="$page.props.jetstream.managesProfilePhotos" class="tw-shrink-0 tw-me-3">
+                                <img class="tw-h-10 tw-w-10 tw-rounded-full tw-object-cover" :src="$page.props.auth.user.profile_photo_url" :alt="$page.props.auth.user.name">
                             </div>
 
                             <div>
-                                <div class="font-medium text-base text-gray-800">
+                                <div class="ftw-ont-medium tw-text-base tw-text-gray-800">
                                     {{ $page.props.auth.user.name }}
                                 </div>
-                                <div class="font-medium text-sm text-gray-500">
+                                <div class="tw-font-medium tw-text-sm tw-text-gray-500">
                                     {{ $page.props.auth.user.email }}
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mt-3 space-y-1">
+                        <div class="tw-mt-3 tw-space-y-1">
                             <ResponsiveNavLink :href="route('profile.show')" :active="route().current('profile.show')">
                                 Profile
                             </ResponsiveNavLink>
@@ -169,9 +170,9 @@ const logout = () => {
 
                             <!-- Team Management -->
                             <template v-if="$page.props.jetstream.hasTeamFeatures">
-                                <div class="border-t border-gray-200" />
+                                <div class="tw-border-t tw-border-gray-200" />
 
-                                <div class="block px-4 py-2 text-xs text-gray-400">
+                                <div class="tw-block tw-px-4 tw-py-2 tw-text-xs tw-text-gray-400">
                                     Manage Team
                                 </div>
 
@@ -186,17 +187,17 @@ const logout = () => {
 
                                 <!-- Team Switcher -->
                                 <template v-if="$page.props.auth.user.all_teams.length > 1">
-                                    <div class="border-t border-gray-200" />
+                                    <div class="tw-border-t tw-border-gray-200" />
 
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
+                                    <div class="tw-block tw-px-4 tw-py-2 tw-text-xs tw-text-gray-400">
                                         Switch Teams
                                     </div>
 
                                     <template v-for="team in $page.props.auth.user.all_teams" :key="team.id">
                                         <form @submit.prevent="switchToTeam(team)">
                                             <ResponsiveNavLink as="button">
-                                                <div class="flex items-center">
-                                                    <svg v-if="team.id == $page.props.auth.user.current_team_id" class="me-2 h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                <div class="tw-flex tw-items-center">
+                                                    <svg v-if="team.id == $page.props.auth.user.current_team_id" class="tw-me-2 tw-h-5 tw-w-5 tw-text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                                     </svg>
                                                     <div>{{ team.name }}</div>
