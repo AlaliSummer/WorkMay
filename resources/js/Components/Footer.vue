@@ -10,24 +10,20 @@
             <div class="col-lg-6">
                 <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                     <li class="nav-item">
-                        <a href="https://www.creative-tim.com" class="nav-link text-m text-muted" target="_blank">Creative
-                            Tim</a>
+                        <a href="" class="nav-link text-m text-muted"
+                           target="_blank">{{ $t('words.home') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://www.updivision.com" class="nav-link text-m text-muted"
-                           target="_blank">UPDIVISION</a>
+                        <a href="http://localhost/courses" class="nav-link text-m text-muted"
+                           target="_blank">{{ $t('words.courses') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://www.creative-tim.com/presentation" class="nav-link text-m text-muted"
-                           target="_blank">About Us</a>
+                        <a href="http://localhost/about" class="nav-link text-m text-muted"
+                           target="_blank">{{ $t('words.about') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://www.creative-tim.com/blog" class="nav-link text-m text-muted"
-                           target="_blank">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.creative-tim.com/license" class="nav-link text-m pe-0 text-muted"
-                           target="_blank">License</a>
+                        <a href="http://localhost/contact" class="nav-link text-m pe-0 text-muted"
+                           target="_blank">{{ $t('words.contact') }}</a>
                     </li>
                 </ul>
             </div>
