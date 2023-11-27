@@ -15,7 +15,15 @@ export default {
             "home": "الرئيسية",
             "courses": "الدورات القادمة",
             "about": "من نحن",
-            "contact": "تواصل معنا"
+            "contact": "تواصل معنا",
+            "eng": "الهندسة",
+            "eng-courses": "الدورات الهندسية",
+            "management": "الإدارة",
+            "management-courses": "الدورات الإدارية",
+            "art": "الفنون",
+            "art-courses": "دورات الفنون",
+            "music": "الموسيقى",
+            "music-courses": "دورات الموسيقى"
         },
         "auth": {
             "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
@@ -214,7 +222,15 @@ export default {
             "home": "Home",
             "courses": "Upcoming Courses",
             "about": "About Us",
-            "contact": "Contact Us"
+            "contact": "Contact Us",
+            "eng": "Engineering",
+            "eng-courses": "Engineering Courses",
+            "management": "Management",
+            "management-courses": "Management Courses",
+            "art": "Art",
+            "art-courses": "Art Courses",
+            "music": "Music",
+            "music-courses": "Music Courses"
         },
         "auth": {
             "failed": "These credentials do not match our records.",
