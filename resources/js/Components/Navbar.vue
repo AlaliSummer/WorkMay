@@ -133,7 +133,7 @@ const logout = () => {
                 <!-- Responsive Navigation Menu -->
                 <div :class="{'tw-block': showingNavigationDropdown, 'tw-hidden': ! showingNavigationDropdown}" class="sm:tw-hidden">
                     <div class="tw-pt-2 tw-pb-3 tw-space-y-1">
-                        <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                        <ResponsiveNavLink :href="route('home')" :active="route().current('home')">
                             {{ $t('words.home') }}
                         </ResponsiveNavLink>
                     </div>
