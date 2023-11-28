@@ -7,13 +7,6 @@ export default {
             "token": "رمز استعادة كلمة المرور هذا غير صالح",
             "user": "لم يتم العثور على أيّ حسابٍ بهذا العنوان الإلكتروني"
         },
-        "auth": {
-            "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
-            "password": "كلمة المرور المدخلة غير صحيحة.",
-            "throttle": "لقد تعديت الحد المسموح لعمليات الدخول المتكررة. يرجى المحاولة مرة أخرى بعد {seconds} ثانية.",
-            "login": "الدخول",
-            "create-account": "انشاء حساب"
-        },
         "pagination": {
             "previous": "&laquo; السابق",
             "next": "التالي &raquo;"
@@ -30,7 +23,16 @@ export default {
             "art": "الفنون",
             "art-courses": "دورات الفنون",
             "music": "الموسيقى",
-            "music-courses": "دورات الموسيقى"
+            "music-courses": "دورات الموسيقى",
+            "up-coming-courses": "الدورات القادمة",
+            "previous-courses": "الدورات السابقة"
+        },
+        "auth": {
+            "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
+            "password": "كلمة المرور المدخلة غير صحيحة.",
+            "throttle": "لقد تعديت الحد المسموح لعمليات الدخول المتكررة. يرجى المحاولة مرة أخرى بعد {seconds} ثانية.",
+            "login": "الدخول",
+            "create-account": "انشاء حساب"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -214,13 +216,6 @@ export default {
             "token": "This password reset token is invalid.",
             "user": "We can't find a user with that email address."
         },
-        "auth": {
-            "failed": "These credentials do not match our records.",
-            "password": "The provided password is incorrect.",
-            "throttle": "Too many login attempts. Please try again in {seconds} seconds.",
-            "login": "Login",
-            "create-account": "Create account"
-        },
         "pagination": {
             "previous": "&laquo; Previous",
             "next": "Next &raquo;"
@@ -237,7 +232,16 @@ export default {
             "art": "Art",
             "art-courses": "Art Courses",
             "music": "Music",
-            "music-courses": "Music Courses"
+            "music-courses": "Music Courses",
+            "up-coming-courses": "Up Coming Courses",
+            "previous-courses": "Previous Courses"
+        },
+        "auth": {
+            "failed": "These credentials do not match our records.",
+            "password": "The provided password is incorrect.",
+            "throttle": "Too many login attempts. Please try again in {seconds} seconds.",
+            "login": "Login",
+            "create-account": "Create account"
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",

@@ -13,4 +13,6 @@ return [
     'art-courses' => 'دورات الفنون',
     'music' => 'الموسيقى',
     'music-courses' => 'دورات الموسيقى',
+    'up-coming-courses' => 'الدورات القادمة',
+    'previous-courses' => 'الدورات السابقة',
 ];
