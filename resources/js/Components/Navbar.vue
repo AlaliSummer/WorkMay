@@ -53,9 +53,14 @@ const logout = () => {
                             </div>
                         </div>
 
-                        <div class="tw-hidden sm:tw-flex sm:tw-items-center sm:tw-ms-6" v-if="$page.props.auth.user">
+                        <div class="tw-hidden sm:tw-flex sm:tw-items-center sm:tw-ms-6">
                             <!-- Settings Dropdown -->
                             <div class="tw-ms-3 tw-relative">
+                                <NavLink :href="route('login')" :active="route().current('courses.index')">
+                                    {{ $t('words.login') }}
+                                </NavLink>
+                            </div>
+                            <div class="tw-ms-3 tw-relative" v-if="$page.props.auth.user">
                                 <Dropdown align="right" width="48">
                                     <template #trigger>
                                         <button v-if="$page.props.jetstream.managesProfilePhotos" class="tw-flex tw-text-sm tw-border-2 tw-border-transparent tw-rounded-full focus:tw-outline-none focus:tw-border-gray-300 tw-transition">

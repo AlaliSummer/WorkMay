@@ -30,7 +30,8 @@ export default {
             "art": "الفنون",
             "art-courses": "دورات الفنون",
             "music": "الموسيقى",
-            "music-courses": "دورات الموسيقى"
+            "music-courses": "دورات الموسيقى",
+            "login": "تسجيل الدخول"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
