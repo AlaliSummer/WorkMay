@@ -5,7 +5,7 @@ import '../css/variables.css';
 import '../fonts/tajawal.css'
 
 import { createApp, h } from 'vue';
-import { createInertiaApp } from '@inertiajs/vue3';
+import { createInertiaApp, Head, Link } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import i18n from './i18n.js'
@@ -20,6 +20,8 @@ createInertiaApp({
     setup({ el, App, props, plugin }) {
         return createApp({ render: () => h(App, props) })
             .use(plugin)
+            .component('InertiaHead', Head)
+            .component('InertiaLink', Link)
             .use(ZiggyVue)
             .use(i18n)
             .mount(el);

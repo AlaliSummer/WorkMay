@@ -12,4 +12,10 @@ class CoursesController extends Controller
         return Inertia::render('Courses/Index',
             ['courses' => Course::latest()->paginate(10),]);
     }
+
+    public function Show($course_id) {
+        return Inertia::render('Courses/Show', [
+            'courses' => Course::findOrFail($course_id),
+        ]);
+    }
 }
