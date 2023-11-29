@@ -29,7 +29,7 @@ const logout = () => {
 </script>
 
 <template>
-    <nav class="tw-bg-white tw-border-b tw-border-gray-100">
+    <nav class="tw-border-b tw-border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8">
                     <div class="tw-flex tw-justify-between tw-h-16">

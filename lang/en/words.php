@@ -15,4 +15,5 @@ return [
     'music-courses' => 'Music Courses',
     'up-coming-courses' => 'Up Coming Courses',
     'previous-courses' => 'Previous Courses',
+    'course-details' => 'Course Details',
 ];

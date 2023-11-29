@@ -25,7 +25,8 @@ export default {
             "music": "الموسيقى",
             "music-courses": "دورات الموسيقى",
             "up-coming-courses": "الدورات القادمة",
-            "previous-courses": "الدورات السابقة"
+            "previous-courses": "الدورات السابقة",
+            "course-details": "تفاصيل الدورة"
         },
         "auth": {
             "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
@@ -234,7 +235,8 @@ export default {
             "music": "Music",
             "music-courses": "Music Courses",
             "up-coming-courses": "Up Coming Courses",
-            "previous-courses": "Previous Courses"
+            "previous-courses": "Previous Courses",
+            "course-details": "Course Details"
         },
         "auth": {
             "failed": "These credentials do not match our records.",

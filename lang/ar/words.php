@@ -15,4 +15,5 @@ return [
     'music-courses' => 'دورات الموسيقى',
     'up-coming-courses' => 'الدورات القادمة',
     'previous-courses' => 'الدورات السابقة',
+    'course-details' => 'تفاصيل الدورة',
 ];
