@@ -3,7 +3,6 @@ import '../css/app.css';
 import '../scss/corporate-ui-dashboard.scss';
 import '../css/variables.css';
 import '../fonts/tajawal.css'
-
 import { createApp, h } from 'vue';
 import { createInertiaApp, Head, Link } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';

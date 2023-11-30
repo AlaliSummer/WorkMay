@@ -40,7 +40,12 @@ export default {
     props: ['users', 'courses'],
     methods: {
         enrollCourse: {
-
+            //If Signed in: Create an Invoice
+            // if(auth()->user()){
+            //     this.$inertia.post(route('trainee.invoice.create', {courses_id: this.courses.id}));
+            // }else{
+            //     this.$inertia.get(route('login');
+            //}
         }
     }
 }
