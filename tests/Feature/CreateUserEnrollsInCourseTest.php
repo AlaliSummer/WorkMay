@@ -12,7 +12,7 @@ class CreateUserEnrollsInCourseTest extends TestCase
     /**
      * @return void
      */
-    public function test_sending_course_details_when_user_enrolled_event_is_fire(): void
+    public function test_sending_course_details_when_user_enrolled_event_is_fired(): void
     {
         $this->withoutExceptionHandling();
 

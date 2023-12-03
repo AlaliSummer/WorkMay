@@ -3,6 +3,7 @@
 use App\Actions\Fortify\CreateNewUser;
 use App\Models\User;
 use Illuminate\Foundation\Application;
+use Illuminate\Mail\Markdown;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,12 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('preview', function () {
+ $markdown = new Markdown(view(), config('mail.markdown'));
+ $data = "Your data to be use in blade file";
+ return $markdown->render("emails.course-details");
+});
 Route::get('/auth/google/redirect', function () {
     return Socialite::driver('google')->redirect();
 })->name('login.google');
@@ -41,7 +48,6 @@ Route::get('/auth/google/callback', function () {
         Auth::login($user);
         return redirect()->route('home');
     }
-    dd(12444444443);
 });
 
 Route::get('/', function () {
