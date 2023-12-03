@@ -13,4 +13,10 @@ return [
     'art-courses' => 'Art Courses',
     'music' => 'Music',
     'music-courses' => 'Music Courses',
+    'email' => 'Email',
+    'password' => 'Password',
+    'forgot-password' => 'Forgot Password?',
+    'login-using' => 'Login Using',
+    'dont-have-an-account' => 'Don\'t have an account?',
+    'sign-up' => 'Sign Up',
 ];

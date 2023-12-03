@@ -1,6 +1,9 @@
 <?php
 
+use App\Actions\Fortify\CreateNewUser;
+use App\Models\User;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -14,13 +17,26 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/auth/redirect', function () {
+Route::get('/auth/google/redirect', function () {
     return Socialite::driver('google')->redirect();
-});
+})->name('login.google');
 
-Route::get('/auth/callback', function () {
-    $user = Socialite::driver('google')->user();
-    // $user->token
+Route::get('/auth/google/callback', function () {
+    $google_user = Socialite::driver('google')->user();
+
+    if ($user = User::where('google_id', $google_user->getId())->first()) {
+        Auth::login($user);
+        return redirect()->route('home');
+    } else {
+        $user = CreateNewUser::create([
+            'name' => $google_user->getName(),
+            'email' => $google_user->getEmail(),
+            'password' => null,
+            'google_id' => $google_user->getId(),
+            'avatar' => $google_user->getAvatar(),
+            'avatar_original' => $google_user->getAvatar(),
+        ]);
+    }
 });
 
 Route::get('/', function () {
