@@ -15,5 +15,11 @@ return [
     'music-courses' => 'Music Courses',
     'up-coming-courses' => 'Up Coming Courses',
     'previous-courses' => 'Previous Courses',
+    'email' => 'Email',
+    'password' => 'Password',
+    'forgot-password' => 'Forgot Password?',
+    'login-using' => 'Login Using',
+    'dont-have-an-account' => 'Don\'t have an account?',
+    'sign-up' => 'Sign Up',
     'course-details' => 'Course Details',
 ];

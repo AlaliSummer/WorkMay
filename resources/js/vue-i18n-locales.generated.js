@@ -25,6 +25,16 @@ export default {
             "music": "الموسيقى",
             "music-courses": "دورات الموسيقى",
             "up-coming-courses": "الدورات القادمة",
+            "previous-courses": "الدورات السابقة"
+            "music-courses": "دورات الموسيقى",
+            "login": "تسجيل الدخول",
+            "welcome": "مرحباً بك",
+            "email": "البريد الإلكتروني",
+            "password": "كلمة المرور",
+            "forgot-password": "نسيت كلمة المرور؟",
+            "login-using": "تسجيل الدخول باستخدام",
+            "dont-have-an-account": "ليس لديك حساب؟",
+            "sign-up": "سجل الآن"
             "previous-courses": "الدورات السابقة",
             "course-details": "تفاصيل الدورة"
         },
@@ -235,6 +245,14 @@ export default {
             "music": "Music",
             "music-courses": "Music Courses",
             "up-coming-courses": "Up Coming Courses",
+            "previous-courses": "Previous Courses"
+            "music-courses": "Music Courses",
+            "email": "Email",
+            "password": "Password",
+            "forgot-password": "Forgot Password?",
+            "login-using": "Login Using",
+            "dont-have-an-account": "Don't have an account?",
+            "sign-up": "Sign Up"
             "previous-courses": "Previous Courses",
             "course-details": "Course Details"
         },
