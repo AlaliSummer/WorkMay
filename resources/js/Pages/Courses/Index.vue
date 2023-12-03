@@ -1,5 +1,5 @@
 <template>
-    <Navbar></Navbar>
+    <Navbar />
     <main class="main-content max-height-vh-100 h-100">
         <div class="pt-5 pb-6 bg-cover" style="background-image: url('/img/header-blue-purple.jpg')"></div>
         <div class="container my-3 py-3">
@@ -198,126 +198,128 @@
                 <div class="col-md-4">
                     <h6 class="text-2xl font-weight-semibold mb-1">{{ $t('words.previous-courses') }}</h6>
                 </div>
-                <div class="col-md-8 mb-6">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card shadow-xs border mb-4">
-                                <div class="card-body py-0">
-                                    <div class="row">
-                                        <div class="col-4 pe-1">
-                                            <div class="chart">
-                                                <canvas id="chart-doughnut-info" class="chart-canvas"
-                                                        height="150"></canvas>
-                                            </div>
-                                        </div>
-                                        <div class="col-8 my-auto">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h4 class="font-weight-semibold text-lg mb-4">Primary Wallet</h4>
-                                                    <p class="text-sm mb-1">Current Balance</p>
-                                                    <h3 class="mb-0 font-weight-bold">$20,450.80</h3>
-                                                </div>
-                                                <div class="ms-auto text-end d-flex flex-column">
-                                                    <div class="dropdown">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                             height="24" viewBox="0 0 24 24" fill="currentColor"
-                                                             class="ms-auto cursor-pointer dropdown-toggle"
-                                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <path fill-rule="evenodd"
-                                                                  d="M10.5 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-                                                                  clip-rule="evenodd" />
-                                                        </svg>
-                                                        <ul class="dropdown-menu dropdown-menu-end me-n4">
-                                                            <li><a class="dropdown-item" href="#">Action</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item" href="#">Another
-                                                                action</a></li>
-                                                            <li><a class="dropdown-item" href="#">Something else
-                                                                here</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <span
-                                                        class="badge badge-sm border border-success text-success bg-success border-radius-sm mt-auto mb-2">
-                                                        <svg width="9" height="9" viewBox="0 0 10 9"
-                                                             fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M0.46967 4.46967C0.176777 4.76256 0.176777 5.23744 0.46967 5.53033C0.762563 5.82322 1.23744 5.82322 1.53033 5.53033L0.46967 4.46967ZM5.53033 1.53033C5.82322 1.23744 5.82322 0.762563 5.53033 0.46967C5.23744 0.176777 4.76256 0.176777 4.46967 0.46967L5.53033 1.53033ZM5.53033 0.46967C5.23744 0.176777 4.76256 0.176777 4.46967 0.46967C4.17678 0.762563 4.17678 1.23744 4.46967 1.53033L5.53033 0.46967ZM8.46967 5.53033C8.76256 5.82322 9.23744 5.82322 9.53033 5.53033C9.82322 5.23744 9.82322 4.76256 9.53033 4.46967L8.46967 5.53033ZM1.53033 5.53033L5.53033 1.53033L4.46967 0.46967L0.46967 4.46967L1.53033 5.53033ZM4.46967 1.53033L8.46967 5.53033L9.53033 4.46967L5.53033 0.46967L4.46967 1.53033Z"
-                                                                fill="#67C23A" />
-                                                        </svg>
-                                                        10.5%
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card shadow-xs border mb-4">
-                                <div class="card-body py-0">
-                                    <div class="row">
-                                        <div class="col-4 pe-1">
-                                            <div class="chart">
-                                                <canvas id="chart-doughnut-dark" class="chart-canvas"
-                                                        height="150"></canvas>
-                                            </div>
-                                        </div>
-                                        <div class="col-8 my-auto">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h4 class="font-weight-semibold text-lg mb-4">Secondary Wallet</h4>
-                                                    <p class="text-sm mb-1">Current Balance</p>
-                                                    <h3 class="mb-0 font-weight-bold">$10,250.60</h3>
-                                                </div>
-                                                <div class="ms-auto text-end d-flex flex-column">
-                                                    <div class="dropdown">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                             height="24" viewBox="0 0 24 24" fill="currentColor"
-                                                             class="ms-auto cursor-pointer dropdown-toggle"
-                                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <path fill-rule="evenodd"
-                                                                  d="M10.5 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-                                                                  clip-rule="evenodd" />
-                                                        </svg>
-                                                        <ul class="dropdown-menu dropdown-menu-end me-n4">
-                                                            <li><a class="dropdown-item" href="#">Action</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item" href="#">Another
-                                                                action</a></li>
-                                                            <li><a class="dropdown-item" href="#">Something else
-                                                                here</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <span
-                                                        class="badge badge-sm border border-success text-success bg-success border-radius-sm mt-auto mb-2">
-                                                        <svg width="9" height="9" viewBox="0 0 10 9"
-                                                             fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M0.46967 4.46967C0.176777 4.76256 0.176777 5.23744 0.46967 5.53033C0.762563 5.82322 1.23744 5.82322 1.53033 5.53033L0.46967 4.46967ZM5.53033 1.53033C5.82322 1.23744 5.82322 0.762563 5.53033 0.46967C5.23744 0.176777 4.76256 0.176777 4.46967 0.46967L5.53033 1.53033ZM5.53033 0.46967C5.23744 0.176777 4.76256 0.176777 4.46967 0.46967C4.17678 0.762563 4.17678 1.23744 4.46967 1.53033L5.53033 0.46967ZM8.46967 5.53033C8.76256 5.82322 9.23744 5.82322 9.53033 5.53033C9.82322 5.23744 9.82322 4.76256 9.53033 4.46967L8.46967 5.53033ZM1.53033 5.53033L5.53033 1.53033L4.46967 0.46967L0.46967 4.46967L1.53033 5.53033ZM4.46967 1.53033L8.46967 5.53033L9.53033 4.46967L5.53033 0.46967L4.46967 1.53033Z"
-                                                                fill="#67C23A" />
-                                                        </svg>
-                                                        33.8%
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <CourseCard
+                    :courses="courses"
+                />
             </div>
+            <Footer class="px-10" />
         </div>
     </main>
 
-    <Footer class="pt-12 px-10"></Footer>
+    <!--            <div class="col-12">-->
+    <!--                <div class="card shadow-xs border mb-4 pb-3">-->
+    <!--                    <div class="card-header pb-0 p-3">-->
+    <!--                        <h6 class="mb-0 font-weight-semibold text-lg">Last articles</h6>-->
+    <!--                        <p class="text-sm mb-1">Here you will find the latest articles.</p>-->
+    <!--                    </div>-->
+    <!--                    <div class="card-body p-3">-->
+    <!--                        <div class="row">-->
+    <!--                            <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">-->
+    <!--                                <div-->
+    <!--                                    class="card card-background border-radius-xl card-background-after-none align-items-start mb-4">-->
+    <!--                                    <div class="full-background bg-cover"-->
+    <!--                                         style="background-image: url('../assets/img/img-8.jpg')"></div>-->
+    <!--                                    <span class="mask bg-dark opacity-1 border-radius-sm"></span>-->
+    <!--                                    <div class="card-body text-start p-3 w-100">-->
+    <!--                                        <div class="row">-->
+    <!--                                            <div class="col-12">-->
+    <!--                                                <div-->
+    <!--                                                    class="blur shadow d-flex align-items-center w-100 border-radius-md border border-white mt-8 p-3">-->
+    <!--                                                    <div class="w-50">-->
+    <!--                                                        <p class="text-dark text-sm font-weight-bold mb-1">Sara-->
+    <!--                                                            Lamalo</p>-->
+    <!--                                                        <p class="text-xs text-secondary mb-0">20 Jul 2022</p>-->
+    <!--                                                    </div>-->
+    <!--                                                    <p class="text-dark text-sm font-weight-bold ms-auto">Growth-->
+    <!--                                                    </p>-->
+    <!--                                                </div>-->
+    <!--                                            </div>-->
+    <!--                                        </div>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                                <a href="javascript:;">-->
+    <!--                                    <h4 class="font-weight-semibold">-->
+    <!--                                        Best strategy games-->
+    <!--                                    </h4>-->
+    <!--                                </a>-->
+    <!--                                <p class="mb-4">-->
+    <!--                                    As Uber works through a huge amount of internal management turmoil.-->
+    <!--                                </p>-->
+    <!--                                <a href="javascript:;"-->
+    <!--                                   class="text-dark font-weight-semibold icon-move-right mt-auto w-100 mb-5">-->
+    <!--                                    Read post-->
+    <!--                                    <i class="fas fa-arrow-right-long text-sm ms-1" aria-hidden="true"></i>-->
+    <!--                                </a>-->
+    <!--                            </div>-->
+    <!--                            <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">-->
+    <!--                                <div-->
+    <!--                                    class="card card-background border-radius-xl card-background-after-none align-items-start mb-4">-->
+    <!--                                    <div class="full-background bg-cover"-->
+    <!--                                         style="background-image: url('../assets/img/img-9.jpg')"></div>-->
+    <!--                                    <span class="mask bg-dark opacity-1 border-radius-sm"></span>-->
+    <!--                                    <div class="card-body text-start p-3 w-100">-->
+    <!--                                        <div class="row">-->
+    <!--                                            <div class="col-12">-->
+    <!--                                                <div-->
+    <!--                                                    class="blur shadow d-flex align-items-center w-100 border-radius-md border border-white mt-8 p-3">-->
+    <!--                                                    <div class="w-50">-->
+    <!--                                                        <p class="text-dark text-sm font-weight-bold mb-1">Charles-->
+    <!--                                                            Deluvio</p>-->
+    <!--                                                        <p class="text-xs text-secondary mb-0">17 Jul 2022</p>-->
+    <!--                                                    </div>-->
+    <!--                                                    <p class="text-dark text-sm font-weight-bold ms-auto">Education-->
+    <!--                                                    </p>-->
+    <!--                                                </div>-->
+    <!--                                            </div>-->
+    <!--                                        </div>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                                <a href="javascript:;">-->
+    <!--                                    <h4 class="font-weight-semibold">-->
+    <!--                                        Don't be afraid to be wrong-->
+    <!--                                    </h4>-->
+    <!--                                </a>-->
+    <!--                                <p class="mb-4">-->
+    <!--                                    As Uber works through a huge amount of internal management turmoil.-->
+    <!--                                </p>-->
+    <!--                                <a href="javascript:;"-->
+    <!--                                   class="text-dark font-weight-semibold icon-move-right mt-auto w-100 mb-5">-->
+    <!--                                    Read post-->
+    <!--                                    <i class="fas fa-arrow-right-long text-sm ms-1" aria-hidden="true"></i>-->
+    <!--                                </a>-->
+    <!--                            </div>-->
+    <!--                            <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">-->
+    <!--                                <div class="card h-100 card-plain border border-dashed px-5">-->
+    <!--                                    <div class="card-body d-flex flex-column justify-content-center text-center">-->
+    <!--                                        <a href="javascript:;">-->
+    <!--                                            <div-->
+    <!--                                                class="icon icon-shape bg-dark text-center text-white rounded-circle mx-auto d-flex align-items-center justify-content-center mb-2">-->
+    <!--                                                <svg xmlns="http://www.w3.org/2000/svg" height="19"-->
+    <!--                                                     width="19" viewBox="0 0 24 24" fill="currentColor">-->
+    <!--                                                    <path fill-rule="evenodd"-->
+    <!--                                                          d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"-->
+    <!--                                                          clip-rule="evenodd" />-->
+    <!--                                                </svg>-->
+    <!--                                            </div>-->
+    <!--                                            <h5 class="text-dark text-lg"> Create new post </h5>-->
+    <!--                                            <p class="text-sm text-secondary mb-0">Drive into the editor and add-->
+    <!--                                                your content.</p>-->
+    <!--                                        </a>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
 </template>
 <script>
 import Navbar from "@/Components/Navbar.vue";
 import Footer from "@/Components/Footer.vue";
+import CourseCard from "@/Components/CourseCard.vue";
 export default {
-    components: {Footer, Navbar}
+    components: {CourseCard, Footer, Navbar},
+    props: ['users', 'courses'],
 }
 </script>
