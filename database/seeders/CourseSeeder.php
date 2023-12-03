@@ -11,7 +11,12 @@ class CourseSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
     {
         $courses = [
             [
@@ -50,7 +55,7 @@ class CourseSeeder extends Seeder
 
         ];
         foreach ($courses as $course) {
-            Course::create($course);
+            Course::firstOrCreate($course);
         }
     }
 }
