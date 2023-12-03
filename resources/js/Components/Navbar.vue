@@ -55,7 +55,7 @@ const logout = () => {
 
                         <div class="tw-hidden sm:tw-flex sm:tw-items-center sm:tw-ms-6">
                             <!-- Settings Dropdown -->
-                            <div class="tw-ms-3 tw-relative">
+                            <div class="tw-ms-3 tw-relative" v-if="!$page.props.auth.user">
                                 <NavLink :href="route('login')" :active="route().current('courses.index')">
                                     {{ $t('words.login') }}
                                 </NavLink>
