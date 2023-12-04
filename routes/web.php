@@ -64,3 +64,5 @@ Route::middleware([
 });
 
 Route::resource('courses', \App\Http\Controllers\CoursesController::class);
+Route::post('courses/{id}/enroll', [\App\Http\Controllers\CoursesInvoicesController::class, 'store'])->name('courses.invoices');
+

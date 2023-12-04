@@ -38,4 +38,15 @@ class Course extends Model
             $model->{$model->getKeyName()} = (string) Str::uuid();
         });
     }
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
+
+    public function invoices()
+    {
+        return $this->hasMany(Invoice::class);
+    }
+
 }

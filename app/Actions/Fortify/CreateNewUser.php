@@ -30,7 +30,7 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
-            'google_id' => $input['google_id'],
+            'google_id' => array_key_exists('google_id', $input) ? $input['google_id'] : '',
         ]);
     }
 }

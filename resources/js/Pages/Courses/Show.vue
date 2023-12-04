@@ -39,10 +39,12 @@ export default {
     components: {CourseCard, Footer, Navbar},
     props: ['users', 'courses'],
     methods: {
-        enrollCourse: {
+        enrollCourse() {
             //If Signed in: Create an Invoice
             // if(auth()->user()){
-            //     this.$inertia.post(route('trainee.invoice.create', {courses_id: this.courses.id}));
+            if(confirm('Sure?')){
+                this.$inertia.post(route('courses.invoices', {id: this.courses.id}));
+            }
             // }else{
             //     this.$inertia.get(route('login');
             //}
