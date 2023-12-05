@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use App\Models\Invoice;
 use App\Models\User;
-use App\Models\UserCourse;
+use App\Models\Enrollment;
 use Brick\Math\RoundingMode;
 use Carbon\Carbon;
 use Faker\Provider\Company;
@@ -33,12 +33,16 @@ class CoursesInvoicesController extends Controller
 
     public function store($course_id)
     {
-//        $paid_at = Carbon::createFromFormat('Y-m-d H:i:s', $payload['event_time'], 'UTC');
         $course = Course::findOrFail($course_id);
         $user = User::find(auth()->user()->id);
 
         $price = $course->price;
-//dd($price);
+        $exist = Enrollment::where('course_id', $course->id)
+            ->where('user_id', $user->id)
+            ->first();
+        if($exist) {
+           abort(404);
+        }
         // create invoice
         $reference_id = 909090;
 
@@ -53,6 +57,15 @@ class CoursesInvoicesController extends Controller
                 'created_by_id' => auth()->user()->id,
             ]);
         $invoice->save();
+
+        // link user with the course
+        $record = Enrollment::create([
+            'user_id' => $user->id,
+            'course_id' => $course->id,
+            'invoice_id' => $invoice->id,
+            'enrolled_at' => now(),
+        ]);
+        $record->save();
         DB::commit();
 
 //////////////////////////////////////////////////
@@ -67,11 +80,8 @@ class CoursesInvoicesController extends Controller
 //        DB::commit();                         //
 //////////////////////////////////////////////////
 
-        // link user with the course
-
         // send notification
 
-//        return redirect()->route('user.dashboard', $course_id);
-        return 0;
+        return redirect()->route('courses.enrolled-successfully', $course->id);
     }
 }

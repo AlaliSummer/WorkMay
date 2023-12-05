@@ -29,6 +29,10 @@ class Course extends Model
         'to_date',
     ];
 
+    protected $appends = [
+       'is_user_enrolled',
+    ];
+
 
     protected static function boot(): void
     {
@@ -49,4 +53,10 @@ class Course extends Model
         return $this->hasMany(Invoice::class);
     }
 
+    public function getIsUserEnrolledAttribute()
+    {
+        return  Enrollment::where('course_id', $this->id)
+            ->where('user_id', auth()->user()->id)
+            ->first();
+    }
 }
