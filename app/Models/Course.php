@@ -30,7 +30,7 @@ class Course extends Model
     ];
 
     protected $appends = [
-       'is_user_enrolled',
+//       'is_user_enrolled',
     ];
 
 
