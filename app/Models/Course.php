@@ -30,7 +30,7 @@ class Course extends Model
     ];
 
     protected $appends = [
-//       'is_user_enrolled',
+       'is_user_enrolled',
     ];
 
 
@@ -51,6 +51,11 @@ class Course extends Model
     public function invoices()
     {
         return $this->hasMany(Invoice::class);
+    }
+
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class);
     }
 
     public function getIsUserEnrolledAttribute()

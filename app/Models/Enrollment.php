@@ -23,10 +23,6 @@ class Enrollment extends Model
         'paid_at',
     ];
 
-    protected $appends = [
-//       'is_user_enrolled',
-    ];
-
     protected static function boot(): void
     {
         parent::boot();
@@ -46,10 +42,4 @@ class Enrollment extends Model
         return $this->belongsTo(Course::class);
     }
 
-    public function getIsUserEnrolledAttribute()
-    {
-        return  Enrollment::where('course_id', $this->id)
-            ->where('user_id', auth()->user()->id)
-            ->first();
-    }
 }
