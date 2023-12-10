@@ -28,9 +28,10 @@
                     لتأكيد حجز مقعدك قم بسداد الفاتورة
                 </div>
                 <div v-if="enrollments.paid_at">
-                    <button class="btn-grad-secondary">
-                        عرض الفاتورة
-                    </button>
+<!--                    <button class="btn-grad-secondary">-->
+<!--                        عرض الفاتورة-->
+<!--                    </button>-->
+                    <a class="btn-grad-secondary" :href="route('invoices.noon.pay', {id: '123'})">عرض الفاتورة</a>
                 </div>
             </div>
             <div v-else>

@@ -66,6 +66,8 @@ Route::middleware([
     Route::get('courses/{id}/enrolled-successfully', [\App\Http\Controllers\CoursesController::class, 'Enrollment'])->name('courses.enrolled-successfully');
 });
 
+Route::post('noon', [\App\Http\Controllers\NoonController::class, 'storeNoonReceipt'])->name('webhooks.noon');
+Route::get('invoices/{id}/pay-noon', [\App\Http\Controllers\NoonController::class, 'pay'])->name('invoices.noon.pay');
 Route::resource('courses', \App\Http\Controllers\CoursesController::class);
 
 
