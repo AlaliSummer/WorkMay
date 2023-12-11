@@ -24,4 +24,6 @@ return [
     'up-coming-courses' => 'الدورات القادمة',
     'previous-courses' => 'الدورات السابقة',
     'course-details' => 'تفاصيل الدورة',
+    'thank-you-for-enrolling-in-our-upcoming-course' => 'شكراً لتسجيلك في دورتنا القادمة',
+    'next-step-is-to-pay-the-course-fee' => 'الخطوة التالية هي دفع رسوم الدورة',
 ];

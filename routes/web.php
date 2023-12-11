@@ -1,6 +1,7 @@
 <?php
 
 use App\Actions\Fortify\CreateNewUser;
+use App\Http\Controllers\EmailDebugController;
 use App\Models\User;
 use Illuminate\Foundation\Application;
 use Illuminate\Mail\Markdown;
@@ -21,11 +22,12 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('preview', function () {
- $markdown = new Markdown(view(), config('mail.markdown'));
- $data = "Your data to be use in blade file";
- return $markdown->render("emails.course-details");
+Route::middleware('debug')->group(function() {
+    // Email templates
+    Route::get('debug', [EmailDebugController::class, 'index'])->name('debug');
+    Route::get('debug/enrolled-in-course', [EmailDebugController::class, 'enrolledInCourse'])->name('debug.emails.enrolled-in-course');
 });
+
 Route::get('/auth/google/redirect', function () {
     return Socialite::driver('google')->redirect();
 })->name('login.google');

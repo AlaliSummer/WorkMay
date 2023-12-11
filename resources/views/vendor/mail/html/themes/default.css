@@ -10,7 +10,7 @@ body *:not(html):not(style):not(br):not(tr):not(code) {
 
 body {
     -webkit-text-size-adjust: none;
-    background-color: #ffffff;
+    background-color: #FAFAFA;
     color: #718096;
     height: 100%;
     line-height: 1.4;
@@ -25,7 +25,7 @@ ul,
 ol,
 blockquote {
     line-height: 1.4;
-    text-align: left;
+    text-align: right;
 }
 
 a {
@@ -43,28 +43,28 @@ h1 {
     font-size: 18px;
     font-weight: bold;
     margin-top: 0;
-    text-align: left;
+    text-align: right;
 }
 
 h2 {
     font-size: 16px;
     font-weight: bold;
     margin-top: 0;
-    text-align: left;
+    text-align: right;
 }
 
 h3 {
     font-size: 14px;
     font-weight: bold;
     margin-top: 0;
-    text-align: left;
+    text-align: right;
 }
 
 p {
     font-size: 16px;
     line-height: 1.5em;
     margin-top: 0;
-    text-align: left;
+    text-align: right;
 }
 
 p.sub {
@@ -81,7 +81,7 @@ img {
     -premailer-cellpadding: 0;
     -premailer-cellspacing: 0;
     -premailer-width: 100%;
-    background-color: #edf2f7;
+    background-color: #FAFAFA;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -124,9 +124,9 @@ img {
     -premailer-cellpadding: 0;
     -premailer-cellspacing: 0;
     -premailer-width: 100%;
-    background-color: #edf2f7;
-    border-bottom: 1px solid #edf2f7;
-    border-top: 1px solid #edf2f7;
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #FAFAFA;
+    border-top: 1px solid #FAFAFA;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -266,7 +266,7 @@ img {
 }
 
 .panel-content {
-    background-color: #edf2f7;
+    background-color: #FAFAFA;
     color: #718096;
     padding: 16px;
 }
@@ -288,4 +288,34 @@ img {
 
 .break-all {
     word-break: break-all;
+}
+
+.btn {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 40px;
+
+    -webkit-text-size-adjust: none;
+    color: #fff;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+ }
+
+/* <- Magic Stuff Start */
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-image: linear-gradient(to right, #DB2431 0%, #7A4397 100%);
 }

@@ -21,7 +21,9 @@
 {{-- Footer --}}
 <x-slot:footer>
 <x-mail::footer>
-© {{ date('Y') }} {{ config('app.name') }}. @lang('All rights reserved.')
+أنت تتلقى هذه الرسالة لأنك قمت بالتسجيل في workmay.net باستخدام عنوان البريد الإلكتروني هذا.
+<br/>
+© {{ date('Y') }} ورك ماي. كل الحقوق محفوظة.
 </x-mail::footer>
 </x-slot:footer>
 </x-mail::layout>
