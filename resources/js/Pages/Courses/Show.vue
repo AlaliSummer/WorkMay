@@ -3,46 +3,66 @@
     <main class="main-content max-height-vh-100 h-100">
         <div class="pt-5 pb-6 bg-cover" style="background-image: url('/img/header-blue-purple.jpg')"></div>
         <div class="container my-3 py-3">
-            <h1>{{courses.title}}</h1>
-            <div class="d-flex">
-                <img src="https://piktochart.com/wp-content/uploads/2023/07/large-92-600x848.jpg"><br/>
-            </div>
-            <h5>معلومات عن الدورة</h5>
-            <p>{{courses.description}}</p>
-            <div>
-                <h5>المقاعد المتاحة</h5>
-                <p>{{courses.seats_available}}</p>
-            </div>
-            <div>
-                <h5>السعر</h5>
-                <p>{{courses.price}}</p>
-            </div>
-            <div>
-                <h5>عدد الساعات</h5>
-                <p>{{courses.hours}}</p>
-            </div>
-            <div v-if="courses.is_user_enrolled">
-                <div>لقد سجلت في الدورة بتاريخ:</div>
-                <div>{{enrollments.enrolled_at}}</div>
-                <div v-if="enrollments.paid_at === null">
-                    لتأكيد حجز مقعدك قم بسداد الفاتورة
+            <h2 class="my-5">{{courses.title}}</h2>
+            <div class="grid-row-2 tw-grid md:tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-12">
+                <div>
+                    <div class="d-flex">
+                        <img class="border-radius-xl" src="https://memberpress.com/wp-content/uploads/2019/11/promote-courses-to-students-1.jpg" width="650"><br/>
+                    </div>
                 </div>
-                <div v-if="enrollments.paid_at">
-<!--                    <button class="btn-grad-secondary">-->
-<!--                        عرض الفاتورة-->
-<!--                    </button>-->
-                    <a class="btn-grad-secondary" :href="route('invoices.noon.pay', {id: '123'})">عرض الفاتورة</a>
+                <div>
+                    <h5>معلومات عن الدورة</h5>
+                    <p>{{courses.description}}</p>
+                    <div>
+                        <h5>المقاعد المتاحة</h5>
+                        <p>{{courses.seats_available}}</p>
+                    </div>
+                    <div>
+                        <h5>السعر</h5>
+                        <p>{{courses.price}}</p>
+                    </div>
+                    <div>
+                        <h5>عدد الساعات</h5>
+                        <p>{{courses.hours}}</p>
+                    </div>
+                </div>
+                <div></div>
+                <div>
+                    <hr class="horizontal mb-4 dark">
+                    <div v-if="courses.is_user_enrolled" class="tw-grid tw-text-center tw-grid-col-1 md:tw-grid-cols-1 lg:tw-grid-cols-2">
+                        <div class="lg:tw-text-right">
+                            <div>
+                            <div class="tw-text-green-700 tw-text-sm pt-2 ">
+                                تاريخ التسجيل:
+                                {{enrollments.enrolled_at}}
+                            </div>
+                            </div>
+                            <div class="mt-2" v-if="enrollments.paid_at === null">
+                                لتأكيد حجز مقعدك قم بسداد الفاتورة
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tw-mx-12 mt-4" v-if="enrollments.paid_at === null">
+                                <button @click="enrollCourse"
+                                        class="btn-grad-secondary mx-auto">
+                                    سداد الفاتورة
+                                </button>
+                            </div>
+                            <div v-if="enrollments.paid_at">
+                                <a class="btn-grad-secondary" :href="route('invoices.noon.pay', {id: '123'})">عرض الفاتورة</a>
+                            </div>
+                            <div v-if="!courses.is_user_enrolled">
+                                <button @click="enrollCourse" class="btn-grad-secondary">
+                                    سجل الان
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div v-else>
-                <button @click="enrollCourse" class="btn-grad-secondary">
-                    سجل الان
-                </button>
-            </div>
-            <Footer class="px-10" />
+            <Footer class="px-10 mt-6" />
         </div>
     </main>
-
 
 </template>
 <script>

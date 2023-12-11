@@ -2,11 +2,7 @@
     <div class="">
         <div class="d-flex">
             <div class="col-12">
-                <div class="">
-                    <div class="card-header pb-0 p-3">
-                        <h6 class="mb-0 font-weight-semibold text-lg">Last articles</h6>
-                        <p class="text-sm mb-1">Here you will find the latest articles.</p>
-                    </div>
+                <div>
                     <div class="card-body p-2">
                         <div class="tw-grid tw-grid-col-1 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-12">
                             <div class="mb-xl-0 mb-4" v-for="course in courses.data" :key="course.id" >

@@ -68,20 +68,13 @@ class CoursesInvoicesController extends Controller
         $record->save();
         DB::commit();
 
-//////////////////////////////////////////////////
-//        DB::beginTransaction();               //
-//        $record = UserCourse::create([        //
-//            'user_id' => auth()->user(),      //
-//            'course_id' => $course,           //
-//            'enrolled_at' => now(),           //
-//            'paid_at' => now(),               //
-//        ]);                                   //
-//        $record->save();                      //
-//        DB::commit();                         //
-//////////////////////////////////////////////////
-
         // send notification
 
         return redirect()->route('courses.enrolled-successfully', $course->id);
+    }
+
+    public function showInvoice()
+    {
+        return Inertia::render('Payments/Invoice');
     }
 }

@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('title');
-            $table->longText('description');
-            $table->date('register_starts_at');
-            $table->date('register_ends_at');
-            $table->integer('seats_available');
-            $table->string('price');
-            $table->string('hours');
-            $table->date('from_date');
-            $table->date('to_date');
+            $table->longText('description')->nullable();
+            $table->date('register_starts_at')->nullable();
+            $table->date('register_ends_at')->nullable();
+            $table->integer('seats_available')->nullable();
+            $table->string('price')->nullable();
+            $table->string('hours')->nullable();
+            $table->date('from_date')->nullable();
+            $table->date('to_date')->nullable();
             $table->timestamps();
         });
     }

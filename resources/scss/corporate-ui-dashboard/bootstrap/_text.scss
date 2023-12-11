@@ -1,0 +1,16 @@
+.text-notification
+{
+    color: red;
+}
+
+.text-notification-bg
+{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+}

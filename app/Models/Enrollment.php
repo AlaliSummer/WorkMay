@@ -16,6 +16,10 @@ class Enrollment extends Model
 
     protected $perPage = 50;
 
+    protected $casts = [
+        'enrolled_at' => 'date:Y-m-d'
+    ];
+
     protected $fillable = [
         'user_id',
         'course_id',
