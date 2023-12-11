@@ -19,4 +19,12 @@ class EmailDebugController extends Controller
             'course_name' => 'ادارة الازامات',
         ]);
     }
+
+    public function paidSuccess()
+    {
+        $markdown = new Markdown(view(), config('mail.markdown'));
+        return $markdown->render("emails.paid-success", [
+            'course_name' => 'ادارة الازامات',
+        ]);
+    }
 }

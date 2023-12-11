@@ -26,6 +26,7 @@ Route::middleware('debug')->group(function() {
     // Email templates
     Route::get('debug', [EmailDebugController::class, 'index'])->name('debug');
     Route::get('debug/enrolled-in-course', [EmailDebugController::class, 'enrolledInCourse'])->name('debug.emails.enrolled-in-course');
+    Route::get('debug/paid-success', [EmailDebugController::class, 'paidSuccess'])->name('debug.emails.paid-success');
 });
 
 Route::get('/auth/google/redirect', function () {

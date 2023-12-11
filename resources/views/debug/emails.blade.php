@@ -7,7 +7,8 @@
     </head>
     <body>
         <ul>
-            <li><a href="{{ route('debug.emails.enrolled-in-course') }}">enrolled-in-course</a></li>
+            <li><a target="_blank" href="{{ route('debug.emails.enrolled-in-course') }}">enrolled-in-course</a></li>
+            <li><a target="_blank" href="{{ route('debug.emails.paid-success') }}">paid-success</a></li>
         </ul>
     </body>
 </html>

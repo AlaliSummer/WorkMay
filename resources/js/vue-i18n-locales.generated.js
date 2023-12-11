@@ -43,7 +43,9 @@ export default {
             "previous-courses": "الدورات السابقة",
             "course-details": "تفاصيل الدورة",
             "thank-you-for-enrolling-in-our-upcoming-course": "شكراً لتسجيلك في دورتنا القادمة",
-            "next-step-is-to-pay-the-course-fee": "الخطوة التالية هي دفع رسوم الدورة"
+            "next-step-is-to-pay-the-course-fee": "الخطوة التالية هي دفع رسوم الدورة",
+            "in-the-upcoming-course": "في الدورة القادمة",
+            "number-of-days": "عدد الأيام"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -261,7 +263,9 @@ export default {
             "sign-up": "Sign Up",
             "course-details": "Course Details",
             "thank-you-for-enrolling-in-our-upcoming-course": "Thank you for enrolling in our upcoming course",
-            "next-step-is-to-pay-the-course-fee": "Next step is to pay the course fee"
+            "next-step-is-to-pay-the-course-fee": "Next step is to pay the course fee",
+            "in-the-upcoming-course": "in the upcoming course",
+            "number-of-days": "Number of days"
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",
