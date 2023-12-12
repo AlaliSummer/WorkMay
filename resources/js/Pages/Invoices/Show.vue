@@ -23,15 +23,17 @@
             <div class="col-md-8 mb-4">
                 <div class="card border shadow-xs">
                     <div class="card-body">
-                        <div class="tw-flex tw-justify-between">
+                        <div class="tw-grid tw-grid-col-2 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-2 tw-gap-12">
                             <div>
-                                <div class="mt-4 mx-4">
+                                <div class="">
                                     <h4>فاتورة ضريبية</h4>
                                     <h4 class="font-weight-semibold tw-text-gray-600">#{{invoice.number}}</h4>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="pt-5 pb-6 bg-cover" style="background-image: url('/WM-LOGO.png')"></div>
+                            <div>
+                                <div class="flex justify-end">
+                                    <img src="/WM-LOGO.png" alt="Logo" class="tw-align-items-end w-15">
+                                </div>
                             </div>
                         </div>
                     </div>
