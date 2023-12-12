@@ -6,7 +6,7 @@
 
 {{ __('words.next-step-is-to-pay-the-course-fee') }}.
 
-@component('mail::magic-button', ['url' => 'hepalsd'])
+@component('mail::magicButton', ['url' => $invoice_url])
 احجز مقعدك
 @endcomponent
 

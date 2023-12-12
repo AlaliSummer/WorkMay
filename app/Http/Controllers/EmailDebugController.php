@@ -17,6 +17,7 @@ class EmailDebugController extends Controller
         $markdown = new Markdown(view(), config('mail.markdown'));
         return $markdown->render("emails.enrolled-in-course", [
             'course_name' => 'ادارة الازامات',
+            'invoice_url' => 'https://workmay.net',
         ]);
     }
 

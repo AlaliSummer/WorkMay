@@ -45,7 +45,8 @@ export default {
             "thank-you-for-enrolling-in-our-upcoming-course": "شكراً لتسجيلك في دورتنا القادمة",
             "next-step-is-to-pay-the-course-fee": "الخطوة التالية هي دفع رسوم الدورة",
             "in-the-upcoming-course": "في الدورة القادمة",
-            "number-of-days": "عدد الأيام"
+            "number-of-days": "عدد الأيام",
+            "enrolled-in-course-email-title": "مبروك!👏 الخطوات اللازمة لإكمال التسجيل في الدورة"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
