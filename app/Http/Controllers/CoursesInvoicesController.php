@@ -72,8 +72,6 @@ class CoursesInvoicesController extends Controller
         // send notification
         $user->notify(new EnrolledInCourseNotification($record));
 
-        dd(123);
-
         return redirect()->route('courses.enrolled-successfully', $course->id);
     }
 
