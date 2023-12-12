@@ -22,4 +22,8 @@ return [
     'dont-have-an-account' => 'Don\'t have an account?',
     'sign-up' => 'Sign Up',
     'course-details' => 'Course Details',
+    'thank-you-for-enrolling-in-our-upcoming-course' => 'Thank you for enrolling in our upcoming course',
+    'next-step-is-to-pay-the-course-fee' => 'Next step is to pay the course fee',
+    'in-the-upcoming-course' => 'in the upcoming course',
+    'number-of-days' => 'Number of days',
 ];

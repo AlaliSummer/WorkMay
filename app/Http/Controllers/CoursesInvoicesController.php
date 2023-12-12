@@ -6,6 +6,7 @@ use App\Models\Course;
 use App\Models\Invoice;
 use App\Models\User;
 use App\Models\Enrollment;
+use App\Notifications\EnrolledInCourseNotification;
 use Brick\Math\RoundingMode;
 use Carbon\Carbon;
 use Faker\Provider\Company;
@@ -69,6 +70,9 @@ class CoursesInvoicesController extends Controller
         DB::commit();
 
         // send notification
+        $user->notify(new EnrolledInCourseNotification($record));
+
+        dd(123);
 
         return redirect()->route('courses.enrolled-successfully', $course->id);
     }

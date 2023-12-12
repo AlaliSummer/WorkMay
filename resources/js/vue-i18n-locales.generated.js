@@ -7,6 +7,13 @@ export default {
             "token": "رمز استعادة كلمة المرور هذا غير صالح",
             "user": "لم يتم العثور على أيّ حسابٍ بهذا العنوان الإلكتروني"
         },
+        "auth": {
+            "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
+            "password": "كلمة المرور المدخلة غير صحيحة.",
+            "throttle": "لقد تعديت الحد المسموح لعمليات الدخول المتكررة. يرجى المحاولة مرة أخرى بعد {seconds} ثانية.",
+            "login": "الدخول",
+            "create-account": "انشاء حساب"
+        },
         "pagination": {
             "previous": "&laquo; السابق",
             "next": "التالي &raquo;"
@@ -34,14 +41,12 @@ export default {
             "sign-up": "سجل الآن",
             "up-coming-courses": "الدورات القادمة",
             "previous-courses": "الدورات السابقة",
-            "course-details": "تفاصيل الدورة"
-        },
-        "auth": {
-            "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
-            "password": "كلمة المرور المدخلة غير صحيحة.",
-            "throttle": "لقد تعديت الحد المسموح لعمليات الدخول المتكررة. يرجى المحاولة مرة أخرى بعد {seconds} ثانية.",
-            "login": "الدخول",
-            "create-account": "انشاء حساب"
+            "course-details": "تفاصيل الدورة",
+            "thank-you-for-enrolling-in-our-upcoming-course": "شكراً لتسجيلك في دورتنا القادمة",
+            "next-step-is-to-pay-the-course-fee": "الخطوة التالية هي دفع رسوم الدورة",
+            "in-the-upcoming-course": "في الدورة القادمة",
+            "number-of-days": "عدد الأيام",
+            "enrolled-in-course-email-title": "مبروك!👏 الخطوات اللازمة لإكمال التسجيل في الدورة"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -225,6 +230,13 @@ export default {
             "token": "This password reset token is invalid.",
             "user": "We can't find a user with that email address."
         },
+        "auth": {
+            "failed": "These credentials do not match our records.",
+            "password": "The provided password is incorrect.",
+            "throttle": "Too many login attempts. Please try again in {seconds} seconds.",
+            "login": "Login",
+            "create-account": "Create account"
+        },
         "pagination": {
             "previous": "&laquo; Previous",
             "next": "Next &raquo;"
@@ -250,14 +262,11 @@ export default {
             "login-using": "Login Using",
             "dont-have-an-account": "Don't have an account?",
             "sign-up": "Sign Up",
-            "course-details": "Course Details"
-        },
-        "auth": {
-            "failed": "These credentials do not match our records.",
-            "password": "The provided password is incorrect.",
-            "throttle": "Too many login attempts. Please try again in {seconds} seconds.",
-            "login": "Login",
-            "create-account": "Create account"
+            "course-details": "Course Details",
+            "thank-you-for-enrolling-in-our-upcoming-course": "Thank you for enrolling in our upcoming course",
+            "next-step-is-to-pay-the-course-fee": "Next step is to pay the course fee",
+            "in-the-upcoming-course": "in the upcoming course",
+            "number-of-days": "Number of days"
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",

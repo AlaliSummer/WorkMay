@@ -1,8 +1,10 @@
 <?php
 
 use App\Actions\Fortify\CreateNewUser;
+use App\Http\Controllers\EmailDebugController;
 use App\Models\User;
 use Illuminate\Foundation\Application;
+use Illuminate\Mail\Markdown;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +21,14 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::middleware('debug')->group(function() {
+    // Email templates
+    Route::get('debug', [EmailDebugController::class, 'index'])->name('debug');
+    Route::get('debug/enrolled-in-course', [EmailDebugController::class, 'enrolledInCourse'])->name('debug.emails.enrolled-in-course');
+    Route::get('debug/paid-success', [EmailDebugController::class, 'paidSuccess'])->name('debug.emails.paid-success');
+});
+
 Route::get('/auth/google/redirect', function () {
     return Socialite::driver('google')->redirect();
 })->name('login.google');
@@ -41,7 +51,6 @@ Route::get('/auth/google/callback', function () {
         Auth::login($user);
         return redirect()->route('home');
     }
-    dd(12444444443);
 });
 
 Route::get('/', function () {
