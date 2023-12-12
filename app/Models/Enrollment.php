@@ -46,4 +46,9 @@ class Enrollment extends Model
         return $this->belongsTo(Course::class);
     }
 
+    public function invoices()
+    {
+        return $this->HasMany(Invoice::class);
+    }
+
 }

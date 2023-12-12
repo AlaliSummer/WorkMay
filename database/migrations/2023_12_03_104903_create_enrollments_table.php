@@ -17,6 +17,8 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
             $table->uuid('course_id')->nullable();
             $table->foreign('course_id')->references('id')->on('courses')->cascadeOnDelete();
+            $table->uuid('invoice_id')->nullable();
+            $table->foreign('invoice_id')->references('id')->on('invoices')->cascadeOnDelete();
             $table->timestamp('enrolled_at')->nullable();
             $table->timestamp('paid_at')->nullable();
             $table->timestamps();

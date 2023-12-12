@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="horizontal mb-4 dark  pt-6">
+            <hr class="horizontal mb-4 dark  pt-4">
             <div class="row">
                 <div class="col-md-4">
                     <h6 class="text-2xl font-weight-semibold mb-1 pb-6">{{ $t('words.up-coming-courses') }}</h6>
@@ -87,7 +87,7 @@
                     :courses="upcoming_courses"
                 />
             </div>
-            <hr class="horizontal mb-4 dark  pt-6">
+            <hr class="horizontal mb-4 dark  pt-4">
             <div class="row">
                 <div class="col-md-4">
                     <h6 class="text-2xl font-weight-semibold mb-1 pb-6">{{ $t('words.previous-courses') }}</h6>

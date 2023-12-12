@@ -73,8 +73,17 @@ class CoursesInvoicesController extends Controller
         return redirect()->route('courses.enrolled-successfully', $course->id);
     }
 
-    public function showInvoice()
+    public function show($invoice_id)
     {
-        return Inertia::render('Payments/Invoice');
+        $user_id = auth()->user()->id;
+        $invoice = Invoice::findOrfail($invoice_id);
+        $enroll = Enrollment::where('invoice_id', $invoice->id)
+            ->where('user_id', $user_id)
+            ->first();
+
+        return Inertia::render('Invoices/Show', [
+            'invoice' => $invoice,
+            'enrollments' => $enroll,
+            ]);
     }
 }

@@ -69,5 +69,4 @@ Route::middleware([
 Route::post('noon', [\App\Http\Controllers\NoonController::class, 'storeNoonReceipt'])->name('webhooks.noon');
 Route::get('invoices/{id}/pay-noon', [\App\Http\Controllers\NoonController::class, 'pay'])->name('invoices.noon.pay');
 Route::resource('courses', \App\Http\Controllers\CoursesController::class);
-Route::get('invoice', [\App\Http\Controllers\CoursesInvoicesController::class, 'showInvoice'])->name('invoice');
-
+Route::get('invoices/{id}', [\App\Http\Controllers\CoursesInvoicesController::class, 'show'])->name('invoice.show');

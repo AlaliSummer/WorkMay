@@ -29,8 +29,8 @@
                 <div></div>
                 <div>
                     <hr class="horizontal mb-4 dark">
-                    <div v-if="courses.is_user_enrolled" class="tw-grid tw-text-center tw-grid-col-1 md:tw-grid-cols-1 lg:tw-grid-cols-2">
-                        <div class="lg:tw-text-right">
+                    <div class="tw-grid tw-text-center tw-grid-col-1 md:tw-grid-cols-1 lg:tw-grid-cols-2">
+                        <div v-if="courses.is_user_enrolled" class="lg:tw-text-right">
                             <div>
                             <div class="tw-text-green-700 tw-text-sm pt-2 ">
                                 تاريخ التسجيل:
@@ -42,14 +42,13 @@
                             </div>
                         </div>
                         <div>
-                            <div class="tw-mx-12 mt-4" v-if="enrollments.paid_at === null">
-                                <button @click="enrollCourse"
-                                        class="btn-grad-secondary mx-auto">
-                                    سداد الفاتورة
-                                </button>
-                            </div>
-                            <div v-if="enrollments.paid_at">
-                                <a class="btn-grad-secondary" :href="route('invoices.noon.pay', {id: '123'})">عرض الفاتورة</a>
+                            <div v-if="courses.is_user_enrolled">
+                                <div class="tw-mx-12 mt-4" v-if="enrollments.paid_at === null">
+                                    <a class="btn-grad-secondary" :href="route('invoices.noon.pay', {id: enrollments.invoice_id})">سداد الفاتورة</a>
+                                </div>
+                                <div v-if="enrollments.paid_at">
+                                    <a class="btn-grad-secondary" :href="route('invoice.show', {id: enrollments.invoice_id})">عرض الفاتورة</a>
+                                </div>
                             </div>
                             <div v-if="!courses.is_user_enrolled">
                                 <button @click="enrollCourse" class="btn-grad-secondary">
