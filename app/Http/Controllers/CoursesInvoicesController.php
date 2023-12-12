@@ -75,8 +75,14 @@ class CoursesInvoicesController extends Controller
 
     public function show($invoice_id)
     {
+        $invoice = Invoice::query()
+            ->with([
+                'user',
+                'course',
+            ])
+            ->findOrFail($invoice_id);
+
         $user_id = auth()->user()->id;
-        $invoice = Invoice::findOrfail($invoice_id);
         $enroll = Enrollment::where('invoice_id', $invoice->id)
             ->where('user_id', $user_id)
             ->first();

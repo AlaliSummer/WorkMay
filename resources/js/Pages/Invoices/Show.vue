@@ -4,29 +4,35 @@
         <div class="row">
             <div class="col-12">
 <!--                d-md-flex align-items-center mb-4-->
-                <div class="tw-grid tw-grid-cols-2">
+                <div class="tw-flex tw-justify-between">
                     <div class="mb-md-0 mb-4">
-                        <h5 class="font-weight-semibold mb-1">تفاصيل الفاتورة</h5>
-                        <p class="text-sm mb-0">Pick an account plan that fits your workflow.</p>
+                        <h5 class="font-weight-semibold mb-1 mt-4">تفاصيل الفاتورة</h5>
                     </div>
                     <div>
-                        <div class="tw-mx-12 mt-4" v-if="enrollments.paid_at === null">
-                            <a class="btn-grad-secondary" :href="route('invoices.noon.pay', {id: enrollments.invoice_id})">سداد الفاتورة</a>
+                        <div class="tw-mx-12 mb-4" v-if="enrollments.paid_at === null">
+                            <a class="btn-grad" :href="route('invoices.noon.pay', {id: enrollments.invoice_id})">سداد الفاتورة</a>
                         </div>
                     </div>
                 </div>
             </div>
             <hr>
             <div class="col-md-4">
-                <h6 class="text-sm font-weight-semibold mb-1">Card details</h6>
-                <p class="text-sm">We’ll credit your account if you need to <br> downgrade during the billing
-                    cycle.</p>
+                <h6 class="text-sm font-weight-semibold mb-1">الدورة</h6>
+                <p class="text-sm">{{invoice.course.title}}</p>
             </div>
             <div class="col-md-8 mb-4">
                 <div class="card border shadow-xs">
                     <div class="card-body">
-                        <div class="row">
-                            <img src="WM-LOGO.png">
+                        <div class="tw-flex tw-justify-between">
+                            <div>
+                                <div class="mt-4 mx-4">
+                                    <h4>فاتورة ضريبية</h4>
+                                    <h4 class="font-weight-semibold tw-text-gray-600">#{{invoice.number}}</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="pt-5 pb-6 bg-cover" style="background-image: url('/WM-LOGO.png')"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -43,7 +49,7 @@ import CourseCard from "@/Components/CourseCard.vue";
 
 export default {
     components: {CourseCard, Footer, Navbar},
-    props: ['users', 'courses', 'enrollments'],
+    props: ['users', 'course', 'enrollments', 'invoice'],
     methods: {
     }
 }

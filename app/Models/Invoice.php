@@ -45,7 +45,7 @@ class Invoice extends Model
 
         static::creating(function ($model) {
             $model->{$model->getKeyName()} = (string) Str::uuid();
-            $model->number = MaxNumber::generateForPrefix('INV');
+            $model->number = MaxNumber::generateForPrefix('INV', 10000);
         });
     }
 
@@ -58,11 +58,6 @@ class Invoice extends Model
     public function course()
     {
         return $this->belongsTo(Course::class);
-    }
-
-    public function enrolment()
-    {
-        return $this->belongsTo(Enrollment::class);
     }
 
 }
