@@ -34,10 +34,10 @@
                                                 aria-describedby="password-addon">
                                         </div>
                                         <div class="d-flex align-items-center">
-                                            <a href="route('password.request')"
+                                            <inertia-link :href="route('password.request')"
                                                 class="text-xs font-weight-bold ms-auto mb-3">
                                                 {{ $t('words.forgot-password') }}
-                                            </a>
+                                            </inertia-link>
                                         </div>
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-dark w-100 mt- mb-3">{{ $t('words.login') }}</button>
@@ -65,7 +65,7 @@
                                 >
                                     <div
                                         class="blur mt-12 p-4 text-center border border-white border-radius-md position-absolute fixed-bottom m-4">
-                                        <h2 class="mt-3 text-dark font-weight-bold">كلام هنا</h2>
+                                        <h2 class="mt-3 text-dark font-weight-bold">تابع رحلتك من هنا</h2>
                                         <h6 class="text-dark text-sm mt-5">كل الحقوق محفوظة © 2023</h6>
                                     </div>
                                 </div>

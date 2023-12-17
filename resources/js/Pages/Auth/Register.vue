@@ -98,6 +98,7 @@ const submit = () => {
                                                    aria-label="Name"
                                                    required
                                                    aria-describedby="name-addon">
+                                            <InputError class="tw-mt-3 tw-ms-1 tw-text-red-500 font-bold" :message="form.errors.name" />
                                         </div>
                                         <label>{{ $t('words.email') }}</label>
                                         <div class="mb-3">
@@ -118,6 +119,7 @@ const submit = () => {
                                                    v-model="form.password"
                                                    class="form-control"
                                                    aria-label="Password" aria-describedby="password-addon">
+                                            <InputError class="tw-mt-3 tw-ms-1 tw-text-red-500 font-bold" :message="form.errors.password" />
                                         </div>
 
                                         <div class="form-check form-check-info text-right mb-0">
@@ -129,6 +131,7 @@ const submit = () => {
                                             <label class="font-weight-normal text-dark mb-0 me-2" for="flexCheckDefault">
                                                 {{ $t('words.i-agree-to') }} <a href="javascript:;" class="text-dark font-weight-bold">{{ $t('words.terms-and-conditions') }}</a>.
                                             </label>
+                                            <InputError class="tw-mt-3 tw-ms-1 tw-text-red-500 font-bold" :message="form.errors.terms" />
                                         </div>
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-dark w-100 mt-4 mb-3">
@@ -140,7 +143,7 @@ const submit = () => {
                                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
                                     <p class="mb-4 text-xs mx-auto">
                                         {{ $t('words.already-have-an-account') }}
-                                        <a href="javascript:;" class="text-dark font-weight-bold">{{ $t('words.login') }}</a>
+                                        <inertia-link :href="route('login')" class="text-dark font-weight-bold">{{ $t('words.login') }}</inertia-link>
                                     </p>
                                 </div>
                             </div>

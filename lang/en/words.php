@@ -33,4 +33,7 @@ return [
     'terms-and-conditions' => 'Terms and Conditions',
     'join-thousands-of-other-talented-people-like-you' => 'Join thousands of other talented people like you',
     'all-rights-reserved' => 'All rights reserved',
+    'enter-your-email' => 'Enter your email',
+    'email-password-reset-link' => 'Email Password Reset Link',
+    'go-back-to-login-page' => 'Go back to login page',
 ];

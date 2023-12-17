@@ -55,7 +55,10 @@ export default {
             "terms-and-conditions": "الشروط والأحكام",
             "already-have-an-account": "هل لديك حساب؟",
             "join-thousands-of-other-talented-people-like-you": "انضم إلى الآلاف من الأشخاص الموهوبين الآخرين مثلك",
-            "all-rights-reserved": "جميع الحقوق محفوظة"
+            "all-rights-reserved": "جميع الحقوق محفوظة",
+            "enter-your-email": "أدخل بريدك الإلكتروني",
+            "email-password-reset-link": "إرسال رابط إعادة تعيين كلمة المرور",
+            "go-back-to-login-page": "العودة إلى صفحة تسجيل الدخول"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -282,7 +285,10 @@ export default {
             "i-agree-to": "I agree to",
             "terms-and-conditions": "Terms and Conditions",
             "join-thousands-of-other-talented-people-like-you": "Join thousands of other talented people like you",
-            "all-rights-reserved": "All rights reserved"
+            "all-rights-reserved": "All rights reserved",
+            "enter-your-email": "Enter your email",
+            "email-password-reset-link": "Email Password Reset Link",
+            "go-back-to-login-page": "Go back to login page"
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",

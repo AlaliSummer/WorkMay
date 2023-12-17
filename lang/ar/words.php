@@ -38,4 +38,7 @@ return [
     'already-have-an-account' => 'هل لديك حساب؟',
     'join-thousands-of-other-talented-people-like-you' => 'انضم إلى الآلاف من الأشخاص الموهوبين الآخرين مثلك',
     'all-rights-reserved' => 'جميع الحقوق محفوظة',
+    'enter-your-email' => 'أدخل بريدك الإلكتروني',
+    'email-password-reset-link' => 'إرسال رابط إعادة تعيين كلمة المرور',
+    'go-back-to-login-page' => 'العودة إلى صفحة تسجيل الدخول',
 ];
