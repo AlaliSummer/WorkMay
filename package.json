@@ -20,7 +20,9 @@
         "vue": "^3.2.31"
     },
     "dependencies": {
+        "@thelevicole/stripe-gradient": "github:thelevicole/stripe-gradient",
         "@vueuse/core": "^10.6.1",
+        "stripe-gradient": "^1.0.1",
         "vite-plugin-run": "^0.5.1",
         "vue-i18n": "^9.7.0"
     }
