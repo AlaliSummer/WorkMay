@@ -10,7 +10,6 @@ class Course extends Model
 {
     use HasFactory;
 
-
     public $incrementing = false;
 
     protected $keyType = 'string';
@@ -33,6 +32,10 @@ class Course extends Model
        'is_user_enrolled',
     ];
 
+    protected $casts = [
+        'from_date' => 'datetime',
+        'to_date' => 'datetime',
+    ];
 
     protected static function boot(): void
     {
@@ -60,7 +63,11 @@ class Course extends Model
 
     public function getIsUserEnrolledAttribute()
     {
-        return  Enrollment::where('course_id', $this->id)
+        if (!auth()->check()) {
+            return false;
+        }
+
+        return Enrollment::where('course_id', $this->id)
             ->where('user_id', auth()->user()->id)
             ->first();
     }

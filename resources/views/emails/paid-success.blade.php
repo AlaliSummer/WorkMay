@@ -23,14 +23,21 @@
     <td style="font-weight: bold">العنوان</td>
 </tr>
 <tr>
-<td style="font-size:12px;vertical-align: top;">2024-01-07<br/>2024-01-11<br/>{{ __('words.number-of-days') }} (4)</td>
-<td style="font-size:12px;direction: ltr;vertical-align: top;">06:00 PM<br/>09:00 PM</td>
-<td style="font-size:12px;vertical-align: top;">الرياض<br/><a style="text-decoration: none;" target="_blank" href="https://maps.app.goo.gl/SxNG3GvA9wGQLNRh7">الموقع على الخريطة</a></td>
+<td style="font-size:12px;vertical-align: top;">{{ $from_date }}<br/>{{ $to_date }}<br/>{{ __('words.number-of-days') }} ({{ $days }})</td>
+<td style="font-size:12px;direction: ltr;vertical-align: top;">{{ $from_time }}<br/>{{ $to_time }}</td>
+<td style="font-size:12px;vertical-align: top;">الرياض<br/>
+@if ($maps_location)
+<a style="text-decoration: none;" target="_blank" href="{{ $maps_location }}">الموقع على الخريطة</a>
+@else
+---<br/>
+قريبا سوف يتم تحديد الموقع
+@endif
+</td>
 </tr>
 </tbody>
 </table>
 
-@component('mail::magic-button', ['url' => 'hepalsd'])
+@component('mail::magicButton', ['url' => $button_url])
 عرض دوراتي القادمة
 @endcomponent
 

@@ -17,7 +17,9 @@ class Enrollment extends Model
     protected $perPage = 50;
 
     protected $casts = [
-        'enrolled_at' => 'date:Y-m-d'
+        'enrolled_at' => 'date:Y-m-d',
+        'from_date' => 'datetime',
+        'to_date' => 'datetime',
     ];
 
     protected $fillable = [

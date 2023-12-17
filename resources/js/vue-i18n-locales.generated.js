@@ -7,6 +7,13 @@ export default {
             "token": "رمز استعادة كلمة المرور هذا غير صالح",
             "user": "لم يتم العثور على أيّ حسابٍ بهذا العنوان الإلكتروني"
         },
+        "auth": {
+            "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
+            "password": "كلمة المرور المدخلة غير صحيحة.",
+            "throttle": "لقد تعديت الحد المسموح لعمليات الدخول المتكررة. يرجى المحاولة مرة أخرى بعد {seconds} ثانية.",
+            "login": "الدخول",
+            "create-account": "انشاء حساب"
+        },
         "pagination": {
             "previous": "&laquo; السابق",
             "next": "التالي &raquo;"
@@ -41,13 +48,6 @@ export default {
             "number-of-days": "عدد الأيام",
             "enrolled-in-course-email-title": "الخطوات اللازمة لإكمال التسجيل في الدورة",
             "success-paid-email-title": "مبروك!👏 تم حجز مقعدك في الدورة"
-        },
-        "auth": {
-            "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
-            "password": "كلمة المرور المدخلة غير صحيحة.",
-            "throttle": "لقد تعديت الحد المسموح لعمليات الدخول المتكررة. يرجى المحاولة مرة أخرى بعد {seconds} ثانية.",
-            "login": "الدخول",
-            "create-account": "انشاء حساب"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -231,6 +231,13 @@ export default {
             "token": "This password reset token is invalid.",
             "user": "We can't find a user with that email address."
         },
+        "auth": {
+            "failed": "These credentials do not match our records.",
+            "password": "The provided password is incorrect.",
+            "throttle": "Too many login attempts. Please try again in {seconds} seconds.",
+            "login": "Login",
+            "create-account": "Create account"
+        },
         "pagination": {
             "previous": "&laquo; Previous",
             "next": "Next &raquo;"
@@ -261,13 +268,6 @@ export default {
             "next-step-is-to-pay-the-course-fee": "Next step is to pay the course fee",
             "in-the-upcoming-course": "in the upcoming course",
             "number-of-days": "Number of days"
-        },
-        "auth": {
-            "failed": "These credentials do not match our records.",
-            "password": "The provided password is incorrect.",
-            "throttle": "Too many login attempts. Please try again in {seconds} seconds.",
-            "login": "Login",
-            "create-account": "Create account"
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",
