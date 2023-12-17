@@ -52,15 +52,16 @@ Route::get('/auth/google/callback', function () {
         return redirect()->route('home');
     }
 });
-
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-})->name('home');
+//WelcomeController
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'Index'])->name('home');
+//Route::get('/', function () {
+//    return Inertia::render('Welcome', [
+//        'canLogin' => Route::has('login'),
+//        'canRegister' => Route::has('register'),
+//        'laravelVersion' => Application::VERSION,
+//        'phpVersion' => PHP_VERSION,
+//    ]);
+//})->name('home');
 
 Route::middleware([
     'auth:sanctum',
