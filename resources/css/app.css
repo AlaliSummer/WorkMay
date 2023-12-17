@@ -5,3 +5,8 @@
 [x-cloak] {
     display: none;
 }
+
+
+[dir=rtl] .form-check .form-check-input {
+    float: right;
+}

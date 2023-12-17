@@ -26,4 +26,11 @@ return [
     'next-step-is-to-pay-the-course-fee' => 'Next step is to pay the course fee',
     'in-the-upcoming-course' => 'in the upcoming course',
     'number-of-days' => 'Number of days',
+    'start-your-new-journey' => 'Start your new journey',
+    'sign-up-tag-line' => 'Carefully selected courses just for you',
+    'name' => 'Name',
+    'i-agree-to' => 'I agree to',
+    'terms-and-conditions' => 'Terms and Conditions',
+    'join-thousands-of-other-talented-people-like-you' => 'Join thousands of other talented people like you',
+    'all-rights-reserved' => 'All rights reserved',
 ];

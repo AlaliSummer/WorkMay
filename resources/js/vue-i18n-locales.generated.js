@@ -47,7 +47,15 @@ export default {
             "in-the-upcoming-course": "في الدورة القادمة",
             "number-of-days": "عدد الأيام",
             "enrolled-in-course-email-title": "الخطوات اللازمة لإكمال التسجيل في الدورة",
-            "success-paid-email-title": "مبروك!👏 تم حجز مقعدك في الدورة"
+            "success-paid-email-title": "مبروك!👏 تم حجز مقعدك في الدورة",
+            "start-your-new-journey": "ابدأ رحلتك الجديدة",
+            "sign-up-tag-line": "دورات مختارة بعناية فقط لأجلك",
+            "name": "الاسم",
+            "i-agree-to": "أوافق على",
+            "terms-and-conditions": "الشروط والأحكام",
+            "already-have-an-account": "هل لديك حساب؟",
+            "join-thousands-of-other-talented-people-like-you": "انضم إلى الآلاف من الأشخاص الموهوبين الآخرين مثلك",
+            "all-rights-reserved": "جميع الحقوق محفوظة"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -267,7 +275,14 @@ export default {
             "thank-you-for-enrolling-in-our-upcoming-course": "Thank you for enrolling in our upcoming course",
             "next-step-is-to-pay-the-course-fee": "Next step is to pay the course fee",
             "in-the-upcoming-course": "in the upcoming course",
-            "number-of-days": "Number of days"
+            "number-of-days": "Number of days",
+            "start-your-new-journey": "Start your new journey",
+            "sign-up-tag-line": "Carefully selected courses just for you",
+            "name": "Name",
+            "i-agree-to": "I agree to",
+            "terms-and-conditions": "Terms and Conditions",
+            "join-thousands-of-other-talented-people-like-you": "Join thousands of other talented people like you",
+            "all-rights-reserved": "All rights reserved"
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",
