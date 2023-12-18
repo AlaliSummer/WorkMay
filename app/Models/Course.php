@@ -29,12 +29,13 @@ class Course extends Model
     ];
 
     protected $appends = [
-       'is_user_enrolled',
+        'is_user_enrolled',
+        'days',
     ];
 
     protected $casts = [
-        'from_date' => 'datetime',
-        'to_date' => 'datetime',
+        'from_date' => 'datetime:d-m-Y',
+        'to_date' => 'datetime:d-m-Y',
     ];
 
     protected static function boot(): void
@@ -70,5 +71,12 @@ class Course extends Model
         return Enrollment::where('course_id', $this->id)
             ->where('user_id', auth()->user()->id)
             ->first();
+    }
+
+    public function getDaysAttribute()
+    {
+        if ($this->from_date && $this->to_date) {
+            return $this->from_date->diffInDays($this->to_date);
+        }
     }
 }

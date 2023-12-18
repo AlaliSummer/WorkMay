@@ -13,17 +13,27 @@
                 <div>
                     <h5>معلومات عن الدورة</h5>
                     <p>{{courses.description}}</p>
-                    <div>
-                        <h5>المقاعد المتاحة</h5>
-                        <p>{{courses.seats_available}}</p>
-                    </div>
-                    <div>
-                        <h5>السعر</h5>
-                        <p>{{courses.price}}</p>
-                    </div>
-                    <div>
-                        <h5>عدد الساعات</h5>
-                        <p>{{courses.hours}}</p>
+                    <div class="tw-grid tw-grid-cols-2 tw-mt-10">
+                        <div>
+                            <h5>الفترة</h5>
+                            <p>
+                                {{ courses.from_date }}<br/>
+                                {{ courses.to_date }}<br/>
+                                ({{ courses.days }}) ايام
+                            </p>
+                        </div>
+                        <div>
+                            <h5>الموقع</h5>
+                            <p>قاعة فندقية</p>
+                        </div>
+                        <div>
+                            <h5>المقاعد المتاحة</h5>
+                            <p>{{ courses.seats_available }}</p>
+                        </div>
+                        <div>
+                            <h5>السعر</h5>
+                            <p>{{ courses.price }} ر.س.</p>
+                        </div>
                     </div>
                 </div>
                 <div></div>

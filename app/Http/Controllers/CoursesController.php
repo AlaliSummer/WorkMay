@@ -12,8 +12,8 @@ class CoursesController extends Controller
 {
     public function Index()
     {
-        $old_courses = Course::where('from_date', '>=', now())->paginate(10);
-        $upcoming_courses = Course::whereNull('from_date')->paginate(10);
+        $old_courses = Course::where('from_date', '<', now())->paginate(10);
+        $upcoming_courses = Course::where('from_date', '>', now())->paginate(10);
 
         return Inertia::render('Courses/Index',
             ['courses' => Course::latest()->paginate(10),

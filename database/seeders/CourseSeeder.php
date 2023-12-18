@@ -34,19 +34,19 @@ class CourseSeeder extends Seeder
                 'seats_available' => '25',
                 'price' => 1250,
                 'hours' => '35 ساعة',
-                'from_date' => Carbon::make('2023-12-24 6:00 PM GMT+3'),
-                'to_date' => Carbon::make('2023-12-28 9:00 PM GMT+3'),
+                'from_date' => Carbon::make('2023-11-24 6:00 PM GMT+3'),
+                'to_date' => Carbon::make('2023-11-28 9:00 PM GMT+3'),
             ],
             [
                 'title' => 'إدارة الازمات',
                 'description' => 'النشاط الخاص بتوجيه ورقابة الأفراد القائمين بتجميع البيانات والمعلومات، وتسجيلها وتجهيزها، ونقلها إلى المستفيدين منها وحفظها وتهيئة الظروف البيئية المناسبة لتحقيق أهداف المنظمة.',
-                'register_starts_at' => Carbon::make('2023-12-14 6:00 PM GMT+3'),
-                'register_ends_at' => Carbon::make('2023-12-23 6:00 PM GMT+3'),
+                'register_starts_at' => Carbon::make('2023-12-14 06:00 PM GMT+3'),
+                'register_ends_at' => Carbon::make('2023-12-23 06:00 PM GMT+3'),
                 'seats_available' => '25',
                 'price' => 1250,
                 'hours' => '35 ساعة',
-                'from_date' => Carbon::make('2023-12-24 6:00 PM GMT+3'),
-                'to_date' => Carbon::make('2023-12-28 9:00 PM GMT+3'),
+                'from_date' => Carbon::make('2023-11-24 06:00 PM GMT+3'),
+                'to_date' => Carbon::make('2023-11-28 09:00 PM GMT+3'),
             ],
             [
                 'title' => 'القيادة الإدارية',
@@ -56,11 +56,22 @@ class CourseSeeder extends Seeder
                 'seats_available' => '25',
                 'price' => 1250,
                 'hours' => '35 ساعة',
-                'from_date' => Carbon::make('2023-12-24 6:00 PM GMT+3'),
-                'to_date' => Carbon::make('2023-12-28 9:00 PM GMT+3'),
+                'from_date' => Carbon::make('2023-11-24 06:00 PM GMT+3'),
+                'to_date' => Carbon::make('2023-11-28 09:00 PM GMT+3'),
             ],
-
+            [
+                'title' => 'إدارة المشاريع الاحترافية (®PMP) - دورة معتمدة',
+                'description' => 'دورة PMP هي اختصار لـ Project Management Professional وهي دورة معتمدة لشهادة تقدمها مؤسسة إدارة المشاريع العالمية (PMI) للمحترفين في إدارة المشاريع. وتعد شهادة PMP معيارًا دوليًا مهنيًا معتمدًا لإدارة المشاريع وتعكس معرفة وخبرة ومهارات المتحصل عليها في هذا المجال.',
+                'register_starts_at' => Carbon::make('2024-01-07 06:00 PM GMT+3'),
+                'register_ends_at' => Carbon::make('2024-01-11 06:00 PM GMT+3'),
+                'seats_available' => '50',
+                'price' => 1499,
+                'hours' => '35 ساعة',
+                'from_date' => Carbon::make('2024-01-07 05:00 PM GMT+3'),
+                'to_date' => Carbon::make('2024-01-11 09:00 PM GMT+3'),
+            ],
         ];
+
         foreach ($courses as $course) {
             Course::firstOrCreate($course);
         }
