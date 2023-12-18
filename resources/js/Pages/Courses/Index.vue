@@ -1,4 +1,5 @@
 <template>
+    <Head :title="$t('words.courses')" />
     <Navbar />
     <PublicLayout>
         <main class="main-content max-height-vh-100 h-100">
@@ -107,8 +108,10 @@
 import Navbar from "@/Components/Navbar.vue";
 import Footer from "@/Components/Footer.vue";
 import CourseCard from "@/Components/CourseCard.vue";
+import { Head } from '@inertiajs/vue3';
+
 export default {
-    components: {CourseCard, Footer, Navbar},
+    components: {CourseCard, Footer, Navbar, Head},
     props: ['users', 'courses', 'old_courses', 'upcoming_courses'],
 }
 </script>
