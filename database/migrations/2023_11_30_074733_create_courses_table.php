@@ -15,6 +15,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('title');
             $table->longText('description')->nullable();
+            $table->string('instructor_name')->nullable();
             $table->date('register_starts_at')->nullable();
             $table->date('register_ends_at')->nullable();
             $table->integer('seats_available')->nullable();

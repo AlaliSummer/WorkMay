@@ -36,4 +36,9 @@ return [
     'enter-your-email' => 'Enter your email',
     'email-password-reset-link' => 'Email Password Reset Link',
     'go-back-to-login-page' => 'Go back to login page',
+    'confirm-registration' => 'Confirm Registration',
+    'course' => 'Course',
+    'phone' => 'Phone',
+    'location' => 'Location',
+    'invoice' => 'Invoice',
 ];

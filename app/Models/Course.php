@@ -76,7 +76,7 @@ class Course extends Model
     public function getDaysAttribute()
     {
         if ($this->from_date && $this->to_date) {
-            return $this->from_date->diffInDays($this->to_date);
+            return $this->from_date->diffInDays($this->to_date) + 1;
         }
     }
 }

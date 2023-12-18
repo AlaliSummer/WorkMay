@@ -72,6 +72,7 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
+    Route::get('courses/{id}/confirm', [\App\Http\Controllers\CourseConfirmController::class, 'index'])->name('courses.confirm');
     Route::post('courses/{id}/enroll', [\App\Http\Controllers\CoursesInvoicesController::class, 'store'])->name('courses.invoices');
     Route::get('courses/{id}/enrolled-successfully', [\App\Http\Controllers\CoursesController::class, 'Enrollment'])->name('courses.enrolled-successfully');
 });

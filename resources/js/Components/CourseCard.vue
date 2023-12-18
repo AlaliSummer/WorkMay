@@ -17,8 +17,8 @@
                                                 <div
                                                     class="blur shadow d-flex align-items-center w-100 border-radius-md border border-white mt-8 p-3">
                                                     <div class="">
-                                                        <p class="text-dark text-sm font-weight-bold mb-1">خالد العبدالله</p>
-                                                        <p class="text-xs text-secondary px-4 mb-0">20 Jul 2022</p>
+                                                        <p class="text-dark text-sm font-weight-bold mb-1">{{ course.instructor_name }}</p>
+                                                        <p class="text-xs text-secondary mb-0 tw-text-start">{{ course.from_date }} ({{ course.days}}) ايام</p>
                                                     </div>
                                                 </div>
                                             </div>

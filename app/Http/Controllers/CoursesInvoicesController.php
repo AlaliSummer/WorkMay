@@ -32,8 +32,13 @@ class CoursesInvoicesController extends Controller
 
     }
 
-    public function store($course_id)
+    public function store(Request $request, $course_id)
     {
+        $request->validate([
+            'name' => 'required|min:3|max:255',
+            'phone' => 'required|min:10|max:20',
+        ]);
+
         $course = Course::findOrFail($course_id);
         $user = User::find(auth()->user()->id);
 
@@ -48,6 +53,10 @@ class CoursesInvoicesController extends Controller
         $reference_id = 909090;
 
         DB::beginTransaction();
+        $user->name = $request->name;
+        $user->phone = $request->phone;
+        $user->save();
+
         $invoice = Invoice::create([
                 'user_id' => $user->id,
                 'course_id' => $course->id,

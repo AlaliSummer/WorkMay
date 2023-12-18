@@ -41,4 +41,9 @@ return [
     'enter-your-email' => 'أدخل بريدك الإلكتروني',
     'email-password-reset-link' => 'إرسال رابط إعادة تعيين كلمة المرور',
     'go-back-to-login-page' => 'العودة إلى صفحة تسجيل الدخول',
+    'confirm-registration' => 'تأكيد التسجيل',
+    'course' => 'الدورة',
+    'phone' => 'رقم الجوال',
+    'location' => 'الموقع',
+    'invoice' => 'الفاتورة',
 ];

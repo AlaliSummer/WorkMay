@@ -1,4 +1,5 @@
 <template>
+    <Head :title="$t('words.courses')" />
     <Navbar />
     <main class="main-content max-height-vh-100 h-100">
         <div class="pt-5 pb-6 bg-cover" style="background-image: url('/img/header-blue-purple.jpg')"></div>
@@ -61,9 +62,9 @@
                                 </div>
                             </div>
                             <div v-if="!courses.is_user_enrolled">
-                                <button @click="enrollCourse" class="btn-grad-secondary">
+                                <inertia-link :href="route('courses.confirm', courses.id)" class="btn-grad-secondary">
                                     سجل الان
-                                </button>
+                                </inertia-link>
                             </div>
                         </div>
                     </div>
@@ -78,20 +79,14 @@
 import Navbar from "@/Components/Navbar.vue";
 import Footer from "@/Components/Footer.vue";
 import CourseCard from "@/Components/CourseCard.vue";
+import { Head } from '@inertiajs/vue3';
 
 export default {
-    components: {CourseCard, Footer, Navbar},
+    components: {CourseCard, Footer, Navbar, Head},
     props: ['users', 'courses', 'enrollments'],
     methods: {
-        enrollCourse() {
-            //If Signed in: Create an Invoice
-            // if(auth()->user()){
-            if(confirm('Sure?')){
-                this.$inertia.post(route('courses.invoices', {id: this.courses.id}));
-            }
-            // }else{
-            //     this.$inertia.get(route('login');
-            //}
+        confirmCourse() {
+            this.$inertia.post(route('courses.invoices', {id: this.courses.id}));
         }
     }
 }

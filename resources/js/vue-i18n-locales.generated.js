@@ -58,7 +58,12 @@ export default {
             "all-rights-reserved": "جميع الحقوق محفوظة",
             "enter-your-email": "أدخل بريدك الإلكتروني",
             "email-password-reset-link": "إرسال رابط إعادة تعيين كلمة المرور",
-            "go-back-to-login-page": "العودة إلى صفحة تسجيل الدخول"
+            "go-back-to-login-page": "العودة إلى صفحة تسجيل الدخول",
+            "confirm-registration": "تأكيد التسجيل",
+            "course": "الدورة",
+            "phone": "رقم الجوال",
+            "location": "الموقع",
+            "invoice": "الفاتورة"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -288,7 +293,12 @@ export default {
             "all-rights-reserved": "All rights reserved",
             "enter-your-email": "Enter your email",
             "email-password-reset-link": "Email Password Reset Link",
-            "go-back-to-login-page": "Go back to login page"
+            "go-back-to-login-page": "Go back to login page",
+            "confirm-registration": "Confirm Registration",
+            "course": "Course",
+            "phone": "Phone",
+            "location": "Location",
+            "invoice": "Invoice"
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",
