@@ -43,7 +43,7 @@ class NoonService implements PaymentServiceInterface
             'configuration' => [
                 'locale' => 'ar',
                 'webhookUrl' => config('noon_payment.webhook_url'),
-                // 'returnUrl' => route('trainees.payment.card.charge'),
+                'returnUrl' => route('invoices.show', $invoice->id),
                 // 'generateShortLink' => true, // TODO: When sharing the invoice with SMS.
             ]
         ]);

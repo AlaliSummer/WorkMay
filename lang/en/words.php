@@ -41,4 +41,5 @@ return [
     'phone' => 'Phone',
     'location' => 'Location',
     'invoice' => 'Invoice',
+    'paid' => 'Paid',
 ];

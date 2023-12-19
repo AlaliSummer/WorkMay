@@ -8,7 +8,7 @@
             <h2 class="pb-4"> قمت بالتسجيل بنجاح في دورة {{course.title}}</h2>
             <p class="">{{course.description}}</p>
             <hr class="horizontal mb-4 dark">
-            <a class="btn-grad-secondary " :href="route('invoice.show', {id: enrollment.invoice_id})">عرض الفاتورة</a>
+            <a class="btn-grad-secondary " :href="route('invoices.show', {id: enrollment.invoice_id})">عرض الفاتورة</a>
             <p class="text-gray-400 mt-2">تم ارسال تفاصيل الفاتورة عبر البريد الالكتروني</p>
         </div>
     </center>

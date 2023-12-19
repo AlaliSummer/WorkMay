@@ -5,6 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Salla\ZATCA\GenerateQrCode;
+use Salla\ZATCA\Tags\InvoiceDate;
+use Salla\ZATCA\Tags\InvoiceTaxAmount;
+use Salla\ZATCA\Tags\InvoiceTotalAmount;
+use Salla\ZATCA\Tags\Seller;
+use Salla\ZATCA\Tags\TaxNumber;
 
 class Invoice extends Model
 {
@@ -39,6 +45,17 @@ class Invoice extends Model
         'created_by_id',
     ];
 
+    protected $casts = [
+        'issued_at' => 'datetime',
+        'paid_at' => 'datetime',
+        'sent_at' => 'datetime',
+        'created_at' => 'datetime',
+    ];
+
+    protected $appends = [
+        'invoice_qr_image',
+    ];
+
     protected static function boot(): void
     {
         parent::boot();
@@ -62,5 +79,19 @@ class Invoice extends Model
     public function scopeNotPaid($q)
     {
         $q->where('status', self::STATUS_UNPAID);
+    }
+
+    /**
+     * @return string
+     */
+    public function getInvoiceQrImageAttribute()
+    {
+        return GenerateQrCode::fromArray([
+            new Seller('شركة مركز احترافية المدرب للتدريب'),
+            new TaxNumber('311555192400003'), // tax number
+            new InvoiceDate($this->created_at->toIso8601ZuluString()), // invoice date as Zulu ISO8601 @see https://en.wikipedia.org/wiki/ISO_8601
+            new InvoiceTotalAmount($this->grand_total),
+            new InvoiceTaxAmount($this->tax)
+        ])->render();
     }
 }

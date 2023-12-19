@@ -63,7 +63,8 @@ export default {
             "course": "الدورة",
             "phone": "رقم الجوال",
             "location": "الموقع",
-            "invoice": "الفاتورة"
+            "invoice": "الفاتورة",
+            "paid": "مدفوع"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -298,7 +299,8 @@ export default {
             "course": "Course",
             "phone": "Phone",
             "location": "Location",
-            "invoice": "Invoice"
+            "invoice": "Invoice",
+            "paid": "Paid"
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",

@@ -4,10 +4,13 @@
     <main class="container">
         <div class="row">
             <div class="col-12 col-lg-10 mx-auto">
-                <div class="tw-flex tw-justify-between tw-items-center mb-4">
-                    <h5 class="font-weight-semibold mb-1 mt-4">تفاصيل الفاتورة</h5>
-                    <div class="tw-ms-12" v-if="enrollments.paid_at === null">
+                <div class="tw-flex tw-justify-between tw-items-center mt-5">
+                    <h5 class="font-weight-semibold">تفاصيل الفاتورة</h5>
+                    <div v-if="invoice.paid_at === null">
                         <a class="btn-grad text-xs" :href="route('invoices.noon.pay', {id: enrollments.invoice_id})">السداد الآن</a>
+                    </div>
+                    <div v-else>
+                        <p class="tw-px-5 tw-bg-green-700 tw-rounded tw-text-white">{{ $t('words.paid') }}</p>
                     </div>
                 </div>
 
@@ -62,7 +65,7 @@
                                 <hr class="horizontal mb-4 dark mx-6">
                                 <div class="tw-grid tw-grid-cols-2 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-2 mt-4 mx-5">
                                     <div>
-                                        <img src="/qrcode-feature.svg" alt="Logo" class=" tw-align-items-end w-60">
+                                        <img :src="invoice.invoice_qr_image" alt="Logo" class=" tw-align-items-end w-60">
                                     </div>
                                     <div class="tw-grid tw-grid-cols-2">
                                         <div class="my-1">المجموع:</div>
@@ -88,9 +91,15 @@
                                     </div>
                                 </div>
                                 <hr class="horizontal mb-4 dark mx-6">
-                                <div class="tw-mx-12 my-5" v-if="enrollments.paid_at === null">
+                                <div class="tw-mx-12 my-5" v-if="invoice.paid_at === null">
                                     <a class="btn-grad" :href="route('invoices.noon.pay', {id: enrollments.invoice_id})">السداد الآن</a>
                                 </div>
+                                <div v-else>
+                                    <p class="tw-px-5 tw-bg-green-700 tw-rounded tw-text-white tw-text-center">
+                                        {{ $t('words.paid') }}
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
