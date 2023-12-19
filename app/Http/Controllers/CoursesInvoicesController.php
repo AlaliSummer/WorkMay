@@ -47,7 +47,7 @@ class CoursesInvoicesController extends Controller
             ->where('user_id', $user->id)
             ->first();
         if($exist) {
-           abort(404);
+            abort(404);
         }
         // create invoice
         $reference_id = 909090;
@@ -58,14 +58,14 @@ class CoursesInvoicesController extends Controller
         $user->save();
 
         $invoice = Invoice::create([
-                'user_id' => $user->id,
-                'course_id' => $course->id,
-                'reference_id' => $reference_id,
-                'grand_total' =>  $price,
-                'sub_total' => $price-($price/1.15*0.15),
-                'tax' => (($price-($price/1.15*0.15))*0.15),
-                'created_by_id' => auth()->user()->id,
-            ]);
+            'user_id' => $user->id,
+            'course_id' => $course->id,
+            'reference_id' => $reference_id,
+            'grand_total' =>  $price,
+            'sub_total' => round($price-($price/1.15*0.15), 2),
+            'tax' => round((($price-($price/1.15*0.15))*0.15), 2),
+            'created_by_id' => auth()->user()->id,
+        ]);
         $invoice->save();
 
         // link user with the course
@@ -93,14 +93,13 @@ class CoursesInvoicesController extends Controller
             ])
             ->findOrFail($invoice_id);
 
-        $user_id = auth()->user()->id;
         $enroll = Enrollment::where('invoice_id', $invoice->id)
-            ->where('user_id', $user_id)
+            ->where('user_id', $invoice->user_id)
             ->first();
 
         return Inertia::render('Invoices/Show', [
             'invoice' => $invoice,
             'enrollments' => $enroll,
-            ]);
+        ]);
     }
 }

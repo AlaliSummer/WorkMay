@@ -1,4 +1,5 @@
 <template>
+    <Head :title="$t('words.courses')" />
     <navbar/>
     <center>
         <div class="tw-container px-3 tw-py-10 lg:tw-w-1/2 tw-mx-auto">
@@ -17,9 +18,10 @@
 import Navbar from "@/Components/Navbar.vue";
 import Footer from "@/Components/Footer.vue";
 import CourseCard from "@/Components/CourseCard.vue";
+import { Head } from '@inertiajs/vue3';
 
 export default {
-    components: {CourseCard, Footer, Navbar},
+    components: {CourseCard, Footer, Navbar, Head},
     props: ['users', 'course', 'message', 'enrollment'],
     methods: {
 

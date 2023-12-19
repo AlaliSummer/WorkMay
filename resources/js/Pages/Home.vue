@@ -21,7 +21,7 @@
                         <div>
 <!--                            <img src="/img/3d-glassy-layered-wavy-ribbons.png" alt="Logo" class="w-10 tw-mt-5 my-2 ">-->
                             <p class="my-5">مع المشهد المتغير باستمرار والتحديات العالمية الجديدة، توجب على الأساتذة والطلاب في جميع أنحاء العالم التكيف. أصبح التواصل مع الأصدقاء والعائلة أسهل عن طريق تطبيقات مثل واتساب أو زوم  وغيرها، وتبع التعليم نفس النهج أيضاً.</p>
-                            <button class="btn-grad my-5 px-8" >الدورات القادمة</button>
+                            <a href="#upcomingcourses" class="btn-grad my-5 px-8" >الدورات القادمة</a>
                         </div>
                     </div>
                     <div>
@@ -55,7 +55,7 @@
             <hr class="horizontal mb-4 dark mx-8">
             <div class="row mx-8">
                 <div class="col-md-4">
-                    <h6 class="text-2xl font-weight-semibold mb-1 pb-6">{{ $t('words.up-coming-courses') }}</h6>
+                    <h6 id="upcomingcourses" class="text-2xl font-weight-semibold mb-1 pb-6">{{ $t('words.up-coming-courses') }}</h6>
                 </div>
                 <CourseCard
                     v-if="upcoming_courses"

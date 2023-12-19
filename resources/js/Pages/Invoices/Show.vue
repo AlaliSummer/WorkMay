@@ -21,67 +21,69 @@
                     <div class="col-md-8 mb-4">
                         <div class="card border shadow-xs">
                             <div class="card-body">
-                                <div class="tw-flex tw-justify-between">
+                                <div class="tw-flex tw-justify-between mx-6 mt-5">
                                     <div class="">
                                         <h4>فاتورة ضريبية</h4>
                                         <h4 class="font-weight-semibold tw-text-gray-600">#{{invoice.number}}</h4>
                                     </div>
-                                    <img src="/WM-LOGO.png" alt="Logo" class="w-20 tw-self-center">
+                                    <img src="/WM-LOGO.png" alt="Logo" class="w-10 tw-self-center">
                                 </div>
                                 <hr class="horizontal mb-4 dark mx-6">
                                 <!-- customer / business information -->
                                 <div class="tw-grid tw-grid-col-2 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-2 mt-4 mx-6">
-                                    <div class="my-1">من:</div>
-                                    <div class="my-1">الى:</div>
-                                    <div class="my-1 tw-text-black">شركة مركز احترافية المدرب للتدريب</div>
-                                    <div class="my-1 tw-text-black">{{invoice.user.name}}</div>
-                                    <div class="my-1 tw-text-black">الرياض، حي اليرموك</div>
-                                    <div class="my-1 tw-text-black">
-                                        <!-- customer address -->
+                                    <div>
+                                        <div class="my-1">من:</div>
+                                        <div class="my-1 tw-text-black">شركة مركز احترافية المدرب للتدريب</div>
+                                        <div class="my-1 tw-text-black">الرياض، حي اليرموك</div>
+                                        <div class="my-1 tw-text-black">311555192400003</div>
                                     </div>
-                                    <div class="my-1 tw-text-black">311555192400003</div>
-                                    <div class="my-1 tw-text-black">{{ invoice.user.phone }}</div>
+                                    <div>
+                                        <div class="my-1">الى:</div>
+                                        <div class="my-1 tw-text-black">{{invoice.user.name}}</div>
+                                        <div class="my-1 tw-text-black">
+                                            <!-- customer address -->
+                                        </div>
+                                        <div class="my-1 tw-text-black">{{ invoice.user.phone }}</div>
+                                    </div>
                                 </div>
                                 <hr class="horizontal mb-4 dark mx-6">
+
                                 <div class="tw-grid tw-grid-col-2 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-2 mt-4 mx-6">
-                                    <div class="my-1">الوصف:</div>
-                                    <div class="my-1">السعر:</div>
-                                    <div class="my-1 tw-text-black">{{invoice.course.title}}</div>
-                                    <div class="my-1 tw-text-black">{{invoice.course.price}}</div>
+                                    <div>
+                                        <div class="my-1">الوصف:</div>
+                                        <div class="my-1 tw-text-black">{{invoice.course.title}}</div>
+                                    </div>
+                                    <div>
+                                        <div class="my-1">السعر:</div>
+                                        <div class="my-1 tw-text-black">{{invoice.course.price}}</div>
+                                    </div>
                                 </div>
+
                                 <hr class="horizontal mb-4 dark mx-6">
-                                <div class="tw-grid tw-grid-col-2 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-2 mt-4 mx-5">
+                                <div class="tw-grid tw-grid-cols-2 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-2 mt-4 mx-5">
                                     <div>
                                         <img src="/qrcode-feature.svg" alt="Logo" class=" tw-align-items-end w-60">
                                     </div>
-                                    <div class="tw-grid tw-grid-col-2 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-2">
+                                    <div class="tw-grid tw-grid-cols-2">
                                         <div class="my-1">المجموع:</div>
                                         <div class="my-1 tw-text-black">{{invoice.sub_total}}</div>
                                         <div class="my-1">الضريبة:</div>
                                         <div class="my-1 tw-text-black">{{invoice.tax}}</div>
                                         <div class="my-1">الإجمالي:</div>
                                         <div class="my-1 tw-text-black">{{invoice.grand_total}}</div>
-                                        <div class="tw-grid tw-grid-col-4 sm:tw-grid-cols-4 md:tw-grid-cols-4 lg:tw-grid-cols-4">
-                                            <div>
-                                                <svg width="40" height="40" class="mx-0.5">
-                                                    <image class=inline xlink:href="https://www.svgrepo.com/show/328112/visa.svg" src="https://www.svgrepo.com/show/328112/visa.svg" width="40" height="40"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <svg width="20" height="40" class="mx-0.5">
-                                                    <image class=inline xlink:href="https://www.svgrepo.com/show/163750/mastercard.svg" src="https://www.svgrepo.com/show/163750/mastercard.svg" width="20" height="40"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <svg width="40" height="40" class="mx-0.5">
-                                                    <image class=inline xlink:href="https://upload.wikimedia.org/wikipedia/commons/f/fb/Mada_Logo.svg" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Mada_Logo.svg" width="40" height="40"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <svg width="40" height="40" class="mx-0.5">
-                                                    <image class=inline xlink:href="https://www.svgrepo.com/show/303191/apple-pay-logo.svg" src="https://www.svgrepo.com/show/303191/apple-pay-logo.svg" width="40" height="40"/>
-                                                </svg>
-                                            </div>
+                                        <div class="tw-flex tw-justify-between tw-col-span-2">
+                                            <svg width="40" height="40" class="mx-0.5">
+                                                <image class="inline" xlink:href="https://www.svgrepo.com/show/328112/visa.svg" src="https://www.svgrepo.com/show/328112/visa.svg" width="40" height="40"/>
+                                            </svg>
+                                            <svg width="20" height="40" class="mx-0.5">
+                                                <image class="inline" xlink:href="https://www.svgrepo.com/show/163750/mastercard.svg" src="https://www.svgrepo.com/show/163750/mastercard.svg" width="20" height="40"/>
+                                            </svg>
+                                            <svg width="40" height="40" class="mx-0.5">
+                                                <image class="inline" xlink:href="https://upload.wikimedia.org/wikipedia/commons/f/fb/Mada_Logo.svg" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Mada_Logo.svg" width="40" height="40"/>
+                                            </svg>
+                                            <svg width="40" height="40" class="mx-0.5">
+                                                <image class="inline" xlink:href="https://www.svgrepo.com/show/303191/apple-pay-logo.svg" src="https://www.svgrepo.com/show/303191/apple-pay-logo.svg" width="40" height="40"/>
+                                            </svg>
                                         </div>
                                     </div>
                                 </div>

@@ -47,7 +47,7 @@
                         <div class="mb-3">
                             <input dir="auto"
                                    type="text"
-                                   value="الرياض - قاعة فندقية"
+                                   value="شمال الرياض - قاعة فندقية"
                                    class="form-control"
                                    disabled>
                         </div>
