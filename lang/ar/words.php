@@ -47,4 +47,8 @@ return [
     'location' => 'الموقع',
     'invoice' => 'الفاتورة',
     'paid' => 'مدفوع',
+    'manage-account' => 'حسابي',
+    'my-courses' => '',
+    'profile' => '',
+    'logout' => '',
 ];

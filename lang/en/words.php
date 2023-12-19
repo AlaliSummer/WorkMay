@@ -42,4 +42,8 @@ return [
     'location' => 'Location',
     'invoice' => 'Invoice',
     'paid' => 'Paid',
+    'manage-account' => 'Manage Account',
+    'my-courses' => 'My Courses',
+    'profile' => 'Profile',
+    'logout' => 'Log Out',
 ];

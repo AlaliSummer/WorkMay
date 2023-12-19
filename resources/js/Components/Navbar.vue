@@ -82,11 +82,15 @@ const logout = () => {
                                     <template #content>
                                         <!-- Account Management -->
                                         <div class="tw-block tw-px-4 tw-py-2 tw-text-xs tw-text-gray-400">
-                                            Manage Account
+                                            {{ $t('words.manage-account') }}
                                         </div>
 
+                                        <DropdownLink :href="route('my-courses')">
+                                            دوراتي
+                                        </DropdownLink>
+
                                         <DropdownLink :href="route('profile.show')">
-                                            Profile
+                                            الملف الشخصي
                                         </DropdownLink>
 
                                         <DropdownLink v-if="$page.props.jetstream.hasApiFeatures" :href="route('api-tokens.index')">
@@ -98,7 +102,7 @@ const logout = () => {
                                         <!-- Authentication -->
                                         <form @submit.prevent="logout">
                                             <DropdownLink as="button">
-                                                Log Out
+                                                تسجيل خروج
                                             </DropdownLink>
                                         </form>
                                     </template>
