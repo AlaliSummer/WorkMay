@@ -49,7 +49,6 @@ class Invoice extends Model
         });
     }
 
-
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -60,4 +59,8 @@ class Invoice extends Model
         return $this->belongsTo(Course::class);
     }
 
+    public function scopeNotPaid($q)
+    {
+        $q->where('status', self::STATUS_UNPAID);
+    }
 }
