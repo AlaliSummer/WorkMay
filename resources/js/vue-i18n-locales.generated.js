@@ -57,8 +57,7 @@ export default {
             "phone": "رقم الجوال",
             "location": "الموقع",
             "invoice": "الفاتورة",
-            "paid": "مدفوع"
-            "invoice": "الفاتورة",
+            "paid": "مدفوع",
             "manage-account": "حسابي",
             "my-courses": "",
             "profile": "",
@@ -298,8 +297,7 @@ export default {
             "phone": "Phone",
             "location": "Location",
             "invoice": "Invoice",
-            "paid": "Paid"
-            "invoice": "Invoice",
+            "paid": "Paid",
             "manage-account": "Manage Account",
             "my-courses": "My Courses",
             "profile": "Profile",

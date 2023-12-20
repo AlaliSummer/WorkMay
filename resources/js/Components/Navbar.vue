@@ -81,16 +81,16 @@ const logout = () => {
 
                                     <template #content>
                                         <!-- Account Management -->
-                                        <div class="tw-block tw-px-4 tw-py-2 tw-text-xs tw-text-gray-400">
-                                            {{ $t('words.manage-account') }}
-                                        </div>
+<!--                                        <div class="tw-block tw-px-4 tw-py-2 tw-text-xs tw-text-gray-400">-->
+<!--                                            {{ $t('words.manage-account') }}-->
+<!--                                        </div>-->
 
-                                        <DropdownLink :href="route('my-courses')">
-                                            دوراتي
-                                        </DropdownLink>
+<!--                                        <DropdownLink :href="route('my-courses')">-->
+<!--                                            دوراتي-->
+<!--                                        </DropdownLink>-->
 
                                         <DropdownLink :href="route('profile.show')">
-                                            الملف الشخصي
+                                            ملفي
                                         </DropdownLink>
 
                                         <DropdownLink v-if="$page.props.jetstream.hasApiFeatures" :href="route('api-tokens.index')">
