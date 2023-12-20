@@ -21,9 +21,9 @@ class CourseSeeder extends Seeder
      */
     public function run()
     {
-        Invoice::truncate();
-        Enrollment::truncate();
-        Course::truncate();
+        Invoice::where('id', '!=', 1)->delete();
+        Enrollment::where('id', '!=', 1)->delete();
+        Course::where('id', '!=', 1)->delete();
 
         $courses = [
             [
