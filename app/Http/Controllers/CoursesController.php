@@ -24,14 +24,21 @@ class CoursesController extends Controller
     public function Show($course_id)
     {
         $course = Course::find($course_id);
-
+        $old_courses = Course::where('from_date', '<', now())->paginate(10);
+        $upcoming_courses = Course::where('from_date', '>', now())->paginate(10);
         $enroll = Enrollment::where('course_id', $course->id)
+            ->where('user_id', optional(auth()->user())->id)
+            ->first();
+        $invoice = Invoice::where('course_id', $course->id)
             ->where('user_id', optional(auth()->user())->id)
             ->first();
 
         return Inertia::render('Courses/Show', [
             'courses' => Course::findOrFail($course_id),
             'enrollments' => $enroll,
+            'invoices' => $invoice,
+            'old_courses' => $old_courses,
+            'upcoming_courses' => $upcoming_courses
         ]);
     }
 

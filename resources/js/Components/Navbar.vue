@@ -145,6 +145,9 @@ const logout = () => {
                         <ResponsiveNavLink :href="route('home')" :active="route().current('home')">
                             {{ $t('words.home') }}
                         </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('courses.index')" :active="route().current('courses.index')">
+                            {{ $t('words.courses') }}
+                        </ResponsiveNavLink>
                     </div>
 
                     <!-- Responsive Settings Options -->

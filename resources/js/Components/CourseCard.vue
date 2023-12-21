@@ -8,8 +8,11 @@
                             <div class="mb-xl-0 mb-4" v-for="course in courses.data" :key="course.id" >
                                 <div
                                     class="tw-transition tw-transform hover:tw--translate-y-1 motion-reduce:tw-transition-none motion-reduce:hover:tw-transform-none card card-background border-radius-xl card-background-after-none align-items-start tw-mb-4">
-                                    <div class="full-background bg-cover"
-                                         style="background-image: url('https://memberpress.com/wp-content/uploads/2019/11/promote-courses-to-students-1.jpg')"></div>
+                                    <div v-if="course.title === 'إدارة الازمات'" class="full-background bg-cover" style="background-image: url('https://ptc-ksa.net/wp-content/uploads/2023/09/top-view-abstract-representation-financial-crisis-e1694680164907.png')"></div>
+                                    <div v-if="course.title === 'أساسيات الأعمال المكتبية'" class="full-background bg-cover" style="background-image: url('https://ptc-ksa.net/wp-content/uploads/2023/12/top-view-workspace-with-glasses-cup-tea1.png')"></div>
+                                    <div v-if="course.title === 'القيادة الإدارية'" class="full-background bg-cover" style="background-image: url('https://ptc-ksa.net/wp-content/uploads/2023/12/financial-business2.png')"></div>
+                                    <div v-if="course.title === 'إدارة المشاريع الاحترافية (®PMP) - دورة معتمدة'" class="full-background bg-cover" style="background-image: url('https://ptc-ksa.net/wp-content/uploads/2023/12/40.png')"></div>
+                                    <div v-if="course.title === 'PMP'" class="full-background bg-cover" style="background-image: url('https://piktochart.com/wp-content/uploads/2023/07/large-92-600x848.jpg')"></div>
                                     <span class="mask bg-dark opacity-1 border-radius-sm"></span>
                                     <div class="card-body text-start p-3 w-100">
                                         <div class="row">
@@ -31,7 +34,7 @@
                                     </h4>
                                 </a>
                                 <p class="mb-4">
-                                    {{course.description}}
+                                    {{course.description.substring(0,100)+"..."}}
                                 </p>
                                 <a href="javascript:;"
                                    class="text-dark font-weight-semibold icon-move-right mt-auto w-100 mb-5">
