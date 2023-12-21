@@ -43,7 +43,7 @@ const logout = () => {
                         <div class="col-auto">
                             <div
                                 class="avatar avatar-2xl rounded-circle position-relative mt-n7 border border-gray-100 border-4">
-                                <img src="/img/team-2.jpg" alt="profile_image" class="w-100">
+                                <img src="/img/Windows_10_Default_Profile_Picture.svg.png" alt="profile_image" class="w-100">
                             </div>
                         </div>
                         <div class="col-auto my-auto">
