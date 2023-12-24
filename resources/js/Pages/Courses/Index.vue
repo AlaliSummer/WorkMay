@@ -8,6 +8,9 @@
                 <div class="row mt-n6 mb-6">
                     <div class="col-lg-3 col-sm-6">
                         <div class="card blur border border-white mb-4 shadow-xs">
+                            <div>
+
+                            </div>
                             <div class="card-body p-4">
                                 <div
                                     class="icon icon-shape bg-white shadow shadow-xs text-center border-radius-md d-flex align-items-center justify-content-center mb-3">

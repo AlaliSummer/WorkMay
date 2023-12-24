@@ -85,9 +85,9 @@ const logout = () => {
 <!--                                            {{ $t('words.manage-account') }}-->
 <!--                                        </div>-->
 
-<!--                                        <DropdownLink :href="route('my-courses')">-->
-<!--                                            دوراتي-->
-<!--                                        </DropdownLink>-->
+                                        <DropdownLink :href="route('my-courses')">
+                                            دوراتي
+                                        </DropdownLink>
 
                                         <DropdownLink :href="route('profile.show')">
                                             ملفي
