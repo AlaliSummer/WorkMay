@@ -53,7 +53,6 @@
         <p></p>
         <!--        <p>courses.title</p>-->
 
-
     </div>
 </template>
 

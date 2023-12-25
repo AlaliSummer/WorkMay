@@ -22,6 +22,18 @@ use Inertia\Inertia;
 |
 */
 
+////////////////////////////////////////////////////////
+// Route::get('/', function () {                      //
+//    return Inertia::render('Welcome', [             //
+//        'canLogin' => Route::has('login'),          //
+//        'canRegister' => Route::has('register'),    //
+//        'laravelVersion' => Application::VERSION,   //
+//        'phpVersion' => PHP_VERSION,                //
+//    ]);                                             //
+// })->name('home');                                  //
+////////////////////////////////////////////////////////
+
+
 Route::middleware('debug')->group(function() {
     // Email templates
     Route::get('debug', [EmailDebugController::class, 'index'])->name('debug');
@@ -52,16 +64,9 @@ Route::get('/auth/google/callback', function () {
         return redirect()->route('home');
     }
 });
+
 //WelcomeController
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'Index'])->name('home');
-//Route::get('/', function () {
-//    return Inertia::render('Welcome', [
-//        'canLogin' => Route::has('login'),
-//        'canRegister' => Route::has('register'),
-//        'laravelVersion' => Application::VERSION,
-//        'phpVersion' => PHP_VERSION,
-//    ]);
-//})->name('home');
 
 Route::middleware([
     'auth:sanctum',
