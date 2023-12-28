@@ -9,7 +9,7 @@ const hasActions = computed(() => !! useSlots().actions);
 
 <template>
     <div class="md:grid md:grid-cols-3 md:gap-6">
-        <div class="mx-10">
+        <div>
             <SectionTitle>
                 <template #title>
                     <slot name="title" />
