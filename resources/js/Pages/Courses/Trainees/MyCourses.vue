@@ -1,5 +1,5 @@
 <template>
-    <Navbar/>
+    <ProfileNavbar/>
     <main>
         <div class="pt-5 pb-6 bg-cover" style="background-image: url('/img/header-blue-purple.jpg')"></div>
         <div class="px-8">
@@ -70,13 +70,13 @@
     <Footer/>
 </template>
 <script>
-import Navbar from "@/Components/Navbar.vue";
+import ProfileNavbar from "@/Components/ProfileNavbar.vue";
 import Footer from "@/Components/Footer.vue";
 import CourseCard from "@/Components/CourseCard.vue";
 import { Head } from '@inertiajs/vue3';
 
 export default {
-    components: {CourseCard, Footer, Navbar, Head},
+    components: {CourseCard, Footer, ProfileNavbar, Head},
     props: ['enrollments', 'course', 'user'],
 }
 </script>

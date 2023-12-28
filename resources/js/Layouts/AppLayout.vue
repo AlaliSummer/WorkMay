@@ -8,6 +8,7 @@ import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import Navbar from "@/Components/Navbar.vue";
+import ProfileNavbar from "@/Components/ProfileNavbar.vue";
 
 defineProps({
     title: String,
@@ -30,7 +31,7 @@ const logout = () => {
 
 <template>
     <div>
-        <Navbar/>
+        <ProfileNavbar/>
         <Head :title="title" />
 
         <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
