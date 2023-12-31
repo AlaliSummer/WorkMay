@@ -178,8 +178,12 @@ const logout = () => {
                         </div>
 
                         <div class="tw-mt-3 tw-space-y-1">
-                            <ResponsiveNavLink :href="route('profile.show')" :active="route().current('profile.show')">
-                                Profile
+                            <ResponsiveNavLink class="text-white" :href="route('profile.show')" :active="route().current('profile.show')">
+                                دوراتي
+                            </ResponsiveNavLink>
+
+                            <ResponsiveNavLink class="text-white" :href="route('profile.show')" :active="route().current('profile.show')">
+                                ملفي
                             </ResponsiveNavLink>
 
                             <ResponsiveNavLink v-if="$page.props.jetstream.hasApiFeatures" :href="route('api-tokens.index')" :active="route().current('api-tokens.index')">
