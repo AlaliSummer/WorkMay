@@ -12,7 +12,9 @@ export default {
             "password": "كلمة المرور المدخلة غير صحيحة.",
             "throttle": "لقد تعديت الحد المسموح لعمليات الدخول المتكررة. يرجى المحاولة مرة أخرى بعد {seconds} ثانية.",
             "login": "الدخول",
-            "create-account": "انشاء حساب"
+            "create-account": "انشاء حساب",
+            "confirm-password": "تأكيد كلمة المرور",
+            "reset-password": "إعادة تعيين كلمة المرور"
         },
         "pagination": {
             "previous": "&laquo; السابق",
@@ -66,9 +68,10 @@ export default {
             "invoice": "الفاتورة",
             "paid": "مدفوع",
             "manage-account": "حسابي",
-            "my-courses": "",
-            "profile": "",
-            "logout": ""
+            "my-courses": "دوراتي",
+            "profile": "الملف الشخصي",
+            "logout": "تسجيل الخروج",
+            "remember-me": "تذكرني للمرة القادمة"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -257,7 +260,9 @@ export default {
             "password": "The provided password is incorrect.",
             "throttle": "Too many login attempts. Please try again in {seconds} seconds.",
             "login": "Login",
-            "create-account": "Create account"
+            "create-account": "Create account",
+            "confirm-password": "Confirm password",
+            "reset-password": "Reset password"
         },
         "pagination": {
             "previous": "&laquo; Previous",
@@ -308,7 +313,8 @@ export default {
             "manage-account": "Manage Account",
             "my-courses": "My Courses",
             "profile": "Profile",
-            "logout": "Log Out"
+            "logout": "Log Out",
+            "remember-me": "Remember Me"
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",

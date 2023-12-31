@@ -48,7 +48,8 @@ return [
     'invoice' => 'الفاتورة',
     'paid' => 'مدفوع',
     'manage-account' => 'حسابي',
-    'my-courses' => '',
-    'profile' => '',
-    'logout' => '',
+    'my-courses' => 'دوراتي',
+    'profile' => 'الملف الشخصي',
+    'logout' => 'تسجيل الخروج',
+    'remember-me' => 'تذكرني للمرة القادمة',
 ];

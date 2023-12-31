@@ -46,4 +46,5 @@ return [
     'my-courses' => 'My Courses',
     'profile' => 'Profile',
     'logout' => 'Log Out',
+    'remember-me' => 'Remember Me',
 ];
