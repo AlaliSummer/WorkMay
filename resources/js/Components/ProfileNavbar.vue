@@ -153,10 +153,10 @@ const logout = () => {
                 <div :class="{'tw-block': showingNavigationDropdown, 'tw-hidden': ! showingNavigationDropdown}" class="sm:tw-hidden">
                     <div class="tw-pt-2 tw-pb-3 tw-space-y-1">
                         <ResponsiveNavLink :href="route('home')" :active="route().current('home')">
-                            {{ $t('words.home') }}
+                            <p class="tw-text-white">{{ $t('words.home') }}</p>
                         </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('courses.index')" :active="route().current('courses.index')">
-                            {{ $t('words.courses') }}
+                            <p class="tw-text-white">{{ $t('words.courses') }}</p>
                         </ResponsiveNavLink>
                     </div>
 
@@ -169,31 +169,31 @@ const logout = () => {
 
                             <div>
                                 <div class="ftw-ont-medium tw-text-base tw-text-gray-800">
-                                    {{ $page.props.auth.user.name }}
+                                    <p class="tw-text-white">   {{ $page.props.auth.user.name }}</p>
                                 </div>
                                 <div class="tw-font-medium tw-text-sm tw-text-gray-500">
-                                    {{ $page.props.auth.user.email }}
+                                    <p class="tw-text-white">    {{ $page.props.auth.user.email }}</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="tw-mt-3 tw-space-y-1">
-                            <ResponsiveNavLink class="text-white" :href="route('my-courses')" :active="route().current('my-courses')">
-                                دوراتي
+                            <ResponsiveNavLink :href="route('my-courses')" :active="route().current('my-courses')">
+                                <p class="tw-text-rose-400 hover:tw-text-gray-800 hover:tw-border-gray-300 focus:tw-outline-none focus:tw-text-gray-800 focus:tw-bg-gray-50 focus:tw-border-gray-300 ">دوراتي</p>
                             </ResponsiveNavLink>
 
                             <ResponsiveNavLink class="text-white" :href="route('profile.show')" :active="route().current('profile.show')">
-                                ملفي
+                                <p class="tw-text-rose-400 hover:tw-text-gray-800 hover:tw-border-gray-300 focus:tw-outline-none focus:tw-text-gray-800 focus:tw-bg-gray-50 focus:tw-border-gray-300 "> ملفي</p>
                             </ResponsiveNavLink>
 
                             <ResponsiveNavLink v-if="$page.props.jetstream.hasApiFeatures" :href="route('api-tokens.index')" :active="route().current('api-tokens.index')">
-                                API Tokens
+                                <p class="tw-text-rose-400 hover:tw-text-gray-800 hover:tw-border-gray-300 focus:tw-outline-none focus:tw-text-gray-800 focus:tw-bg-gray-50 focus:tw-border-gray-300 ">API Tokens</p>
                             </ResponsiveNavLink>
 
                             <!-- Authentication -->
-                            <form method="POST" @submit.prevent="logout">
-                                <ResponsiveNavLink as="button">
-                                    js[
+                            <form method="POST" @submit.prevent="logout" >
+                                <ResponsiveNavLink as="button" class="tw-text-start">
+                                    <p class="tw-text-rose-400 hover:tw-text-gray-800 hover:tw-border-gray-300 focus:tw-outline-none focus:tw-text-gray-800 focus:tw-bg-gray-50 focus:tw-border-gray-300 "> تسجيل خروج</p>
                                 </ResponsiveNavLink>
                             </form>
 
