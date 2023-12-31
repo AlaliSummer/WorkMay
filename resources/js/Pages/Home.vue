@@ -6,7 +6,7 @@
         <div class="col-12">
             <!--                d-md-flex align-items-center mb-4-->
             <div class="bg">
-                <div class="tw-grid tw-grid-col-2 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-2 tw-gap-12 mt-4 mx-8 pb-6">
+                <div class="tw-grid tw-grid-col-2 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-2 tw-gap-12 xl:tw-mx-12 mx-2 pb-6">
                     <div class="grid-row-2 tw-grid md:tw-grid-cols-1 lg:tw-grid-cols-1 mb-md-0 mx-4">
                         <div>
                             <p class="mt-7" style="color:#A73468;">
@@ -20,19 +20,19 @@
                         </div>
                         <div>
                             <p class="my-5">طور مهاراتك من خلال التحاقك بالدورات التدريبية على منصتنا. التدريب يساعد على فهم طبيعة سوق العمل ومتطلباته، وكذلك توقعات أرباب العمل ويزيد من فرص الحصول على وظيفة.</p>
-                            <a href="#upcomingcourses" class="btn-grad my-5 px-8" >الدورات القادمة</a>
+                            <a href="#upcomingcourses" class="btn-grad mt-5 px-1" >الدورات القادمة</a>
                         </div>
                     </div>
                     <div>
-                        <div class="tw-flex tw-justify-end mx-4" >
+                        <div class="tw-flex tw-justify-end mx-2" >
                             <img src="/img/3d-construction-abstract-composition-with-human-silhouette-1.png" alt="Logo" class="tw-align-items-end w-60 tw-mt-5 mx-6">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mx-8">
+            <div class="mx-4">
                 <div class="tw-rounded-lg tw-bg-white tw-drop-shadow-2xl mb-8">
-                    <div class="py-6 px-6">
+                    <div class="py-6 px-4">
                         <div class="tw-grid tw-grid-col-2 sm:tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-3 tw-gap-12">
                             <div>
                                 استكشف أحدث الدورات المهنية المتاحة لدينا والمختارة بعناية.
@@ -51,8 +51,8 @@
                     </div>
                 </div>
             </div>
-            <hr class="horizontal mb-4 dark mx-8">
-            <div class="row mx-8">
+            <hr class="horizontal mb-4 dark mx-4">
+            <div class="row mx-2">
                 <div class="col-md-4">
                     <h6 id="upcomingcourses" class="text-2xl font-weight-semibold mb-1 pb-6">{{ $t('words.up-coming-courses') }}</h6>
                 </div>
@@ -61,8 +61,8 @@
                     :courses="upcoming_courses"
                 />
             </div>
-            <hr class="horizontal mb-4 dark mx-8">
-            <div class="row mx-8">
+            <hr class="horizontal mb-4 dark mx-4">
+            <div class="row mx-2">
                 <div class="col-md-4">
                     <h6 class="text-2xl font-weight-semibold mb-1 pb-6">{{ $t('words.previous-courses') }}</h6>
                 </div>
@@ -73,7 +73,7 @@
             </div>
         </div>
     </PublicLayout>
-    <Footer class="px-10" />
+    <Footer class="px-2" />
 </template>
 <script>
 import Navbar from "@/Components/Navbar.vue";
