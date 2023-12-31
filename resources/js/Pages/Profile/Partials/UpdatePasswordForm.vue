@@ -39,7 +39,7 @@ const updatePassword = () => {
 
 <template>
     <div class="row">
-        <div class="col-12 col-lg-10 mx-auto px-10">
+        <div class="col-12 col-lg-10 mx-auto px-4">
             <hr>
             <div class="row">
                 <div class="col-md-4">

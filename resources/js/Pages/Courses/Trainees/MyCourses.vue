@@ -2,14 +2,14 @@
     <ProfileNavbar/>
     <main>
         <div class="pt-5 pb-6 bg-cover" style="background-image: url('/img/header-blue-purple.jpg')"></div>
-        <div class="px-8">
+        <div class="px-4">
             <div class="tw-flex tw-justify-between">
                 <div class="">
-                    <h4 class="text-2xl font-weight-semibold pt-10 pb-4" >دوراتي</h4>
+                    <h4 class="text-2xl font-weight-semibold pt-6 pb-4" >دوراتي</h4>
                 </div>
                 <img src="/img/mega-creator(4).png" alt="Logo" class="w-20 tw-self-center">
             </div>
-            <hr class="horizontal mb-4 dark mt-5">
+            <hr class="horizontal mb-4 dark mt-4">
             <div>
                 <div class="row">
                     <div class="d-flex">

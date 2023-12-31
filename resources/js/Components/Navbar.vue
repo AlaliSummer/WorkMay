@@ -168,7 +168,7 @@ const logout = () => {
                         </div>
 
                         <div class="tw-mt-3 tw-space-y-1">
-                            <ResponsiveNavLink :href="route('profile.show')" :active="route().current('profile.show')">
+                            <ResponsiveNavLink :href="route('my-courses')" :active="route().current('my-courses')">
                                 دوراتي
                             </ResponsiveNavLink>
 

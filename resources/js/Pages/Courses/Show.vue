@@ -47,7 +47,7 @@
                     <div class="tw-grid tw-text-center tw-grid-col-1 md:tw-grid-cols-1 lg:tw-grid-cols-2">
                         <div v-if="courses.is_user_enrolled" class="lg:tw-text-right">
                             <div>
-                                <div class="tw-text-green-700 tw-text-sm pt-2 ">
+                                <div class="tw-text-green-700 tw-text-sm py-2 ">
                                     تاريخ التسجيل:
                                     {{enrollments.enrolled_at}}
                                 </div>
@@ -79,7 +79,7 @@
                     <p class="tw-text-gray-400">يمكنك تصفح دوراتنا القادمة وحجز مقعدك مبكرا</p>
                 </div>
             </div>
-            <Footer class="px-10 mt-6" />
+            <Footer class="container" />
         </div>
     </main>
 

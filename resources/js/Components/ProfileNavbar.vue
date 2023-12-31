@@ -178,7 +178,7 @@ const logout = () => {
                         </div>
 
                         <div class="tw-mt-3 tw-space-y-1">
-                            <ResponsiveNavLink class="text-white" :href="route('profile.show')" :active="route().current('profile.show')">
+                            <ResponsiveNavLink class="text-white" :href="route('my-courses')" :active="route().current('my-courses')">
                                 دوراتي
                             </ResponsiveNavLink>
 
@@ -193,7 +193,7 @@ const logout = () => {
                             <!-- Authentication -->
                             <form method="POST" @submit.prevent="logout">
                                 <ResponsiveNavLink as="button">
-                                    تسجيل خروج
+                                    js[
                                 </ResponsiveNavLink>
                             </form>
 

@@ -20,7 +20,7 @@ defineProps({
                 Profile
             </h2>
         </template>
-        <div>
+        <div class="container">
             <div class="max-w-7xl mx-auto pt-6 sm:px-6 lg:px-8">
                 <div v-if="$page.props.jetstream.canUpdateProfileInformation">
                     <UpdateProfileInformationForm :user="$page.props.auth.user" />
