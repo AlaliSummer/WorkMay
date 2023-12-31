@@ -3,7 +3,7 @@
     <Head :title="$t('words.home')" />
     <navbar/>
     <PublicLayout>
-        <div class="col-12">
+        <div class="container">
             <!--                d-md-flex align-items-center mb-4-->
             <div class="bg">
                 <div class="tw-grid tw-grid-col-2 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-2 tw-gap-12 xl:tw-mx-12 mx-2 pb-6">
@@ -73,7 +73,7 @@
             </div>
         </div>
     </PublicLayout>
-    <Footer class="px-2" />
+    <Footer class="container" />
 </template>
 <script>
 import Navbar from "@/Components/Navbar.vue";

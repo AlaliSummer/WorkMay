@@ -1,7 +1,7 @@
 <template>
     <Head :title="$t('words.courses')" />
     <Navbar />
-    <PublicLayout>
+    <PublicLayout class="container">
         <main class="main-content max-height-vh-100 h-100">
             <div class="pt-5 pb-6 bg-cover" style="background-image: url('/img/header-blue-purple.jpg')"></div>
             <div class="container my-3 py-3">
@@ -102,7 +102,7 @@
                         :courses="old_courses"
                     />
                 </div>
-                <Footer class="px-10" />
+                <Footer class="container" />
             </div>
         </main>
     </PublicLayout>

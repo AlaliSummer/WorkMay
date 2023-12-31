@@ -193,7 +193,7 @@ const logout = () => {
                             <!-- Authentication -->
                             <form method="POST" @submit.prevent="logout">
                                 <ResponsiveNavLink as="button">
-                                    Log Out
+                                    تسجيل خروج
                                 </ResponsiveNavLink>
                             </form>
 
