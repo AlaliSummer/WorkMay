@@ -3,8 +3,6 @@
 use App\Actions\Fortify\CreateNewUser;
 use App\Http\Controllers\EmailDebugController;
 use App\Models\User;
-use Illuminate\Foundation\Application;
-use Illuminate\Mail\Markdown;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;

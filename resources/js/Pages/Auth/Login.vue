@@ -1,3 +1,4 @@
+
 <template>
     <div class="container position-sticky z-index-sticky top-0">
         <div class="row">
@@ -17,7 +18,7 @@
                                     <h3 class="font-weight-black text-dark display-6">{{ $t('words.welcome') }}</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form role="form" method="POST" action="sign-in">
+                                    <form role="form" @submit.prevent="submit">
                                         <div class="w-full">
                                         <label class="w-full">{{ $t('words.email') }}</label>
                                         </div>
