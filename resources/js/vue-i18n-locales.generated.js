@@ -7,6 +7,15 @@ export default {
             "token": "رمز استعادة كلمة المرور هذا غير صالح",
             "user": "لم يتم العثور على أيّ حسابٍ بهذا العنوان الإلكتروني"
         },
+        "auth": {
+            "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
+            "password": "كلمة المرور المدخلة غير صحيحة.",
+            "throttle": "لقد تعديت الحد المسموح لعمليات الدخول المتكررة. يرجى المحاولة مرة أخرى بعد {seconds} ثانية.",
+            "login": "الدخول",
+            "create-account": "انشاء حساب",
+            "confirm-password": "تأكيد كلمة المرور",
+            "reset-password": "إعادة تعيين كلمة المرور"
+        },
         "pagination": {
             "previous": "&laquo; السابق",
             "next": "التالي &raquo;"
@@ -62,16 +71,11 @@ export default {
             "my-courses": "دوراتي",
             "profile": "الملف الشخصي",
             "logout": "تسجيل الخروج",
-            "remember-me": "تذكرني للمرة القادمة"
-        },
-        "auth": {
-            "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
-            "password": "كلمة المرور المدخلة غير صحيحة.",
-            "throttle": "لقد تعديت الحد المسموح لعمليات الدخول المتكررة. يرجى المحاولة مرة أخرى بعد {seconds} ثانية.",
-            "login": "الدخول",
-            "create-account": "انشاء حساب",
-            "confirm-password": "تأكيد كلمة المرور",
-            "reset-password": "إعادة تعيين كلمة المرور"
+            "remember-me": "تذكرني للمرة القادمة",
+            "reset-password": "إعادة تعيين كلمة المرور",
+            "reset-password-notification-explain": "تلقيت هذا البريد الإلكتروني لأننا تلقينا طلب إعادة تعيين كلمة مرور لحسابك.",
+            "password-reset-expiry": "سينتهي صلاحية رابط إعادة تعيين كلمة المرور هذا في {count} دقائق.",
+            "password-reset-do-nothing-note": "إذا لم تطلب إعادة تعيين كلمة المرور ، فلا يلزم اتخاذ أي إجراءات أخرى."
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -255,6 +259,15 @@ export default {
             "token": "This password reset token is invalid.",
             "user": "We can't find a user with that email address."
         },
+        "auth": {
+            "failed": "These credentials do not match our records.",
+            "password": "The provided password is incorrect.",
+            "throttle": "Too many login attempts. Please try again in {seconds} seconds.",
+            "login": "Login",
+            "create-account": "Create account",
+            "confirm-password": "Confirm password",
+            "reset-password": "Reset password"
+        },
         "pagination": {
             "previous": "&laquo; Previous",
             "next": "Next &raquo;"
@@ -305,16 +318,11 @@ export default {
             "my-courses": "My Courses",
             "profile": "Profile",
             "logout": "Log Out",
-            "remember-me": "Remember Me"
-        },
-        "auth": {
-            "failed": "These credentials do not match our records.",
-            "password": "The provided password is incorrect.",
-            "throttle": "Too many login attempts. Please try again in {seconds} seconds.",
-            "login": "Login",
-            "create-account": "Create account",
-            "confirm-password": "Confirm password",
-            "reset-password": "Reset password"
+            "remember-me": "Remember Me",
+            "reset-password": "Reset Password",
+            "reset-password-notification-explain": "You are receiving this email because we received a password reset request for your account.",
+            "password-reset-expiry": "This password reset link will expire in {count} minutes.",
+            "password-reset-do-nothing-note": "If you did not request a password reset, no further action is required."
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",
