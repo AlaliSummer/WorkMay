@@ -32,13 +32,14 @@ class CoursesController extends Controller
         $invoice = Invoice::where('course_id', $course->id)
             ->where('user_id', optional(auth()->user())->id)
             ->first();
-
+        $can_enroll = now() < $course->from_date;
         return Inertia::render('Courses/Show', [
-            'courses' => Course::findOrFail($course_id),
+            'course' => $course,
             'enrollments' => $enroll,
-            'invoices' => $invoice,
+            'invoice' => $invoice,
             'old_courses' => $old_courses,
-            'upcoming_courses' => $upcoming_courses
+            'upcoming_courses' => $upcoming_courses,
+            'can_enroll' => $can_enroll,
         ]);
     }
 
