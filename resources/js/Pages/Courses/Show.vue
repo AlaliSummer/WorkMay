@@ -42,6 +42,8 @@
                     </div>
                 </div>
                 <div></div>
+                <p>{{ Date.now() }}</p>
+                <p>{{ new Date(courses.from_date) }}</p>
                 <div v-if="Date.now() < new Date(courses.from_date)">
                     <hr class="horizontal mb-4 dark">
                     <div class="tw-grid tw-text-center tw-grid-col-1 md:tw-grid-cols-1 lg:tw-grid-cols-2">

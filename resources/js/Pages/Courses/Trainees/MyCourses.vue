@@ -2,7 +2,7 @@
     <ProfileNavbar/>
     <main>
         <div class="pt-5 pb-6 bg-cover" style="background-image: url('/img/header-blue-purple.jpg')"></div>
-        <div class="px-4">
+        <div class="container">
             <div class="tw-flex tw-justify-between">
                 <div class="">
                     <h4 class="text-2xl font-weight-semibold pt-6 pb-4" >دوراتي</h4>
@@ -67,7 +67,7 @@
         </div>
     </main>
 
-    <Footer/>
+    <Footer class="container"/>
 </template>
 <script>
 import ProfileNavbar from "@/Components/ProfileNavbar.vue";
