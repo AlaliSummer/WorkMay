@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\CourseInvoicePaidEvent;
 use App\Models\Invoice;
 use App\Services\NoonService;
 use CodeBugLab\NoonPayment\Facades\NoonPayment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Event;
 
 class NoonController extends Controller
 {
@@ -59,6 +61,8 @@ class NoonController extends Controller
                 'status' => Invoice::STATUS_PAID,
             ]);
             DB::commit();
+
+            Event::dispatch(new CourseInvoicePaidEvent($invoice));
         } else {
             // TODO: Record failure. e.g. Send notification of failure...
             // $this->recordFailure($request, $order);

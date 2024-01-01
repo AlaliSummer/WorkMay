@@ -44,7 +44,7 @@
 <div class="text-center" style="margin-top:40px;color:white;background-image:linear-gradient(
           rgba(0, 0, 0, 0.2),
           rgba(0, 0, 0, 0.2)
-        ),url('/img/header-blue-purple.jpg');padding:20px;border-radius: 20px;">
+        ),url('{{url('/img/header-blue-purple.jpg')}}');padding:20px;border-radius: 20px;">
 <p><b>ترقب احدث الدورات القيمة والممتعة بالإشتراك معنا!</b></p>
 <p>نتعاقد مع أفضل معاهد التدريب والمدربين المستقلين لتوفير متعة اكتساب مهارات جديدة، سواء بالنسبة للهوايات المهنية أو الترفيهية.</p>
 </div>

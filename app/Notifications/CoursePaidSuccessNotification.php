@@ -3,23 +3,25 @@
 namespace App\Notifications;
 
 use App\Models\Enrollment;
+use App\Models\Invoice;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class EnrolledPaidSuccessNotification extends Notification
+class CoursePaidSuccessNotification extends Notification
 {
     use Queueable;
 
-    public Enrollment $enrollment;
+    public Invoice $invoice;
 
     /**
      * Create a new notification instance.
      */
-    public function __construct(Enrollment $enrollment)
+    public function __construct(Invoice $invoice)
     {
-        $this->enrollment = $enrollment;
+        $invoice = $invoice->load('course');
+        $this->invoice = $invoice;
     }
 
     /**
@@ -41,16 +43,16 @@ class EnrolledPaidSuccessNotification extends Notification
             ->subject(__('words.success-paid-email-title'))
             ->bcc('shafiqalshaar@clarastars.com')
             ->markdown('emails.paid-success', [
-                'course_name' => $this->enrollment->course->title,
+                'course_name' => 'ادارة الازامات',
+                'course_name' => $this->invoice->course->title,
                 'button_url' => url('dashboard'),
-                'from_date' => $this->enrollment->course->from_date,
-                'to_date' => $this->enrollment->course->to_date,
-                'days' => $this->enrollment->course->from_date->diffInDays($this->enrollment->to_date),
-                'hours' => $this->enrollment->course->from_date->diffInHours($this->enrollment->course->to_date),
-                'from_time' => optional($this->enrollment->course->from_date)->format('H:i'),
-                'to_time' => optional($this->enrollment->course->to_date)->format('H:i'),
-                'maps_location' => $this->enrollment->course->maps_location,
-
+                'from_date' => $this->invoice->course->from_date->format('Y-m-d'),
+                'to_date' => $this->invoice->course->to_date->format('Y-m-d'),
+                'days' => $this->invoice->course->from_date->diffInDays($this->invoice->course->to_date),
+                'hours' => $this->invoice->course->from_date->diffInHours($this->invoice->course->to_date),
+                'from_time' => optional($this->invoice->course->from_date)->format('h:i A'),
+                'to_time' => optional($this->invoice->course->to_date)->format('h:i A'),
+                'maps_location' => $this->invoice->course->maps_location,
             ]);
     }
 

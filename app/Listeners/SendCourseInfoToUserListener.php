@@ -2,10 +2,11 @@
 
 namespace App\Listeners;
 
+use App\Notifications\CoursePaidSuccessNotification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class SendCourseDetailsNotification
+class SendCourseInfoToUserListener
 {
     /**
      * Create the event listener.
@@ -20,6 +21,6 @@ class SendCourseDetailsNotification
      */
     public function handle(object $event): void
     {
-        //
+        $event->invoice->user->notify(new CoursePaidSuccessNotification($event->invoice));
     }
 }
