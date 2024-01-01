@@ -23,7 +23,7 @@ class CoursesController extends Controller
 
     public function Show($course_id)
     {
-        $course = Course::find($course_id);
+        $course = Course::findOrFail($course_id);
         $old_courses = Course::where('from_date', '<', now())->paginate(10);
         $upcoming_courses = Course::where('from_date', '>', now())->paginate(10);
         $enroll = Enrollment::where('course_id', $course->id)
