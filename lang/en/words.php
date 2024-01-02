@@ -54,4 +54,6 @@ return [
     'regards' => 'Regards',
     'hello' => 'Hello',
     'email-button-text' => "If you're having trouble clicking the \":actionText\" button, copy and paste the URL below\n".'into your web browser:',
+    'terms' => 'Terms of Service',
+    'privacy' => 'Privacy Policy',
 ];

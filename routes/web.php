@@ -2,6 +2,8 @@
 
 use App\Actions\Fortify\CreateNewUser;
 use App\Http\Controllers\EmailDebugController;
+use App\Http\Controllers\PrivacyController;
+use App\Http\Controllers\TermsController;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -85,3 +87,6 @@ Route::get('invoices/{id}/pay-noon', [\App\Http\Controllers\NoonController::clas
 Route::resource('courses', \App\Http\Controllers\CoursesController::class);
 Route::get('invoices/{id}', [\App\Http\Controllers\CoursesInvoicesController::class, 'show'])->name('invoices.show');
 Route::get('my-courses', [\App\Http\Controllers\MyCoursesController::class, 'Index'])->name('my-courses');
+
+Route::get('terms', [TermsController::class, 'index'])->name('terms');
+Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy');

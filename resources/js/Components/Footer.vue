@@ -1,3 +1,6 @@
+<script setup>
+import {Link} from "@inertiajs/vue3";
+</script>
 <template>
     <footer class="footer p-5">
         <div class="row align-items-center justify-content-lg-between ">
@@ -24,6 +27,14 @@
                     <li class="nav-item">
                         <a href="http://localhost/contact" class="nav-link text-m pe-0 text-muted"
                            target="_blank">{{ $t('words.contact') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <Link href="/privacy" class="nav-link text-m pe-0 text-muted"
+                           target="_blank">{{ $t('words.privacy') }}</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link href="/terms" class="nav-link text-m pe-0 text-muted"
+                           target="_blank">{{ $t('words.terms') }}</Link>
                     </li>
                 </ul>
             </div>

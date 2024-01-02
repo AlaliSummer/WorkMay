@@ -75,7 +75,12 @@ export default {
             "reset-password": "إعادة تعيين كلمة المرور",
             "reset-password-notification-explain": "تلقيت هذا البريد الإلكتروني لأننا تلقينا طلب إعادة تعيين كلمة مرور لحسابك.",
             "password-reset-expiry": "سينتهي صلاحية رابط إعادة تعيين كلمة المرور هذا في {count} دقائق.",
-            "password-reset-do-nothing-note": "إذا لم تطلب إعادة تعيين كلمة المرور ، فلا يلزم اتخاذ أي إجراءات أخرى."
+            "password-reset-do-nothing-note": "إذا لم تطلب إعادة تعيين كلمة المرور ، فلا يلزم اتخاذ أي إجراءات أخرى.",
+            "regards": "مع تحياتنا",
+            "hello": "مرحباً",
+            "email-button-text": "إذا كنت تواجه مشكلة في النقر على الزر \"{actionText}\"، فانسخ عنوان URL الموجود أدناه والصقه\nفي متصفح الويب الخاص بك:\"\"",
+            "terms": "الشروط والأحكام",
+            "privacy": "سياسة الخصوصية"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -322,7 +327,12 @@ export default {
             "reset-password": "Reset Password",
             "reset-password-notification-explain": "You are receiving this email because we received a password reset request for your account.",
             "password-reset-expiry": "This password reset link will expire in {count} minutes.",
-            "password-reset-do-nothing-note": "If you did not request a password reset, no further action is required."
+            "password-reset-do-nothing-note": "If you did not request a password reset, no further action is required.",
+            "regards": "Regards",
+            "hello": "Hello",
+            "email-button-text": "If you're having trouble clicking the \"{actionText}\" button, copy and paste the URL below\ninto your web browser:",
+            "terms": "Terms of Service",
+            "privacy": "Privacy Policy"
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",
