@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper-c27b6911.js";import{o as c,e}from"./app-74ab7dfa.js";const r={},t={src:"/WM-LOGO.png",alt:"Logo",class:"w-56"};function s(n,a){return c(),e("img",t)}const p=o(r,[["render",s]]);export{p as A};
