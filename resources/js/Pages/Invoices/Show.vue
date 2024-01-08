@@ -108,7 +108,7 @@
         </div>
     </main>
 
-    <Footer class="px-10 mt-12" />
+    <Footer class="container" />
 </template>
 <script>
 import Navbar from "@/Components/Navbar.vue";
