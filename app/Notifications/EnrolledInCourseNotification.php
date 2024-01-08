@@ -42,7 +42,7 @@ class EnrolledInCourseNotification extends Notification
             ->bcc('shafiqalshaar@clarastars.com')
             ->markdown('emails.enrolled-in-course', [
                 'course_name' => $this->enroll->course->title,
-                'invoice_url' => url('invoices.show'), // TODO: Update the URL.
+                'invoice_url' => route('invoices.show', $this->enroll->invoices()->first()->id), // TODO: Update the URL.
             ]);
     }
 
