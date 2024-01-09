@@ -6,11 +6,13 @@
             <div class="col-12 col-lg-10 mx-auto">
                 <div class="tw-flex tw-justify-between tw-items-center mt-5">
                     <h5 class="font-weight-semibold">تفاصيل الفاتورة</h5>
-                    <div v-if="invoice.paid_at === null">
-                        <a class="btn-grad text-xs" :href="route('invoices.noon.pay', {id: enrollments.invoice_id})">السداد الآن</a>
-                    </div>
-                    <div v-else>
-                        <p class="tw-px-5 tw-bg-green-700 tw-rounded tw-text-white">{{ $t('words.paid') }}</p>
+                    <div>
+                        <div v-if="invoice.paid_at === null">
+                            <a class="btn-grad text-xs" :href="route('invoices.noon.pay', {id: enrollments.invoice_id})">السداد الآن</a>
+                        </div>
+                        <div v-else>
+                            <img class="tw-center" src="https://i.ibb.co/kMHzJWW/checked.png" width="80" height="80">
+                        </div>
                     </div>
                 </div>
 
@@ -94,12 +96,11 @@
                                 <div class="tw-mx-12 my-5" v-if="invoice.paid_at === null">
                                     <a class="btn-grad" :href="route('invoices.noon.pay', {id: enrollments.invoice_id})">السداد الآن</a>
                                 </div>
-                                <div v-else>
-                                    <p class="tw-px-5 tw-bg-green-700 tw-rounded tw-text-white tw-text-center">
+                                <div v-else class="tw-text-white tw-bg-green-700 tw-rounded-full tw-mx-8 tw-px-6 tw-py-1 tw-font-bold tw-border-solid border-2 tw-border-green-700">
+                                    <center>
                                         {{ $t('words.paid') }}
-                                    </p>
+                                    </center>
                                 </div>
-
                             </div>
                         </div>
                     </div>

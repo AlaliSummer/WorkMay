@@ -58,6 +58,9 @@
                         </div>
                         <div>
                             <div v-if="course.is_user_enrolled">
+                                <div class="tw-mx-12 mt-4" v-if="invoice.paid_at === null">
+                                    <a class="btn-grad-secondary" :href="route('invoices.show', {id: enrollments.invoice_id})">سداد الفاتورة</a>
+                                </div>
                                 <div v-if="invoice.paid_at">
                                     <a class="btn-grad-secondary" :href="route('invoices.show', {id: enrollments.invoice_id})">عرض الفاتورة</a>
                                 </div>
