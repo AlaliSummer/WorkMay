@@ -40,7 +40,6 @@ class Invoice extends Model
         'issued_at',
         'paid_at',
         'status',
-        'payment_method',
         'sent_at',
         'created_by_id',
     ];

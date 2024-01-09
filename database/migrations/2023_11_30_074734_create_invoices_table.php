@@ -27,7 +27,6 @@ return new class extends Migration
             $table->timestamp('issued_at')->nullable();
             $table->timestamp('paid_at')->nullable();
             $table->tinyInteger('status')->default(Invoice::STATUS_UNPAID);
-            $table->tinyInteger('payment_method')->nullable();
             $table->date('sent_at')->nullable();
             $table->uuid('created_by_id')->nullable();
             $table->foreign('created_by_id')->references('id')->on('users');

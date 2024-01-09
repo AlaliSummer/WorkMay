@@ -55,7 +55,6 @@ class NoonController extends Controller
             DB::beginTransaction();
             $invoice = Invoice::withoutGlobalScopes()->find($invoice_id);
             $invoice->update([
-                'payment_method' => $order->result->paymentDetails->mode,
                 'reference_id' => $order->result->order->id,
                 'paid_at' => now(),
                 'status' => Invoice::STATUS_PAID,
