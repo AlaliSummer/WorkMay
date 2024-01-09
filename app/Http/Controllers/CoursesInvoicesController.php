@@ -86,6 +86,8 @@ class CoursesInvoicesController extends Controller
 
     public function show($invoice_id)
     {
+        sleep(2);
+        
         $invoice = Invoice::query()
             ->with([
                 'user',
