@@ -7,6 +7,15 @@ export default {
             "token": "رمز استعادة كلمة المرور هذا غير صالح",
             "user": "لم يتم العثور على أيّ حسابٍ بهذا العنوان الإلكتروني"
         },
+        "auth": {
+            "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
+            "password": "كلمة المرور المدخلة غير صحيحة.",
+            "throttle": "لقد تعديت الحد المسموح لعمليات الدخول المتكررة. يرجى المحاولة مرة أخرى بعد {seconds} ثانية.",
+            "login": "الدخول",
+            "create-account": "انشاء حساب",
+            "confirm-password": "تأكيد كلمة المرور",
+            "reset-password": "إعادة تعيين كلمة المرور"
+        },
         "pagination": {
             "previous": "&laquo; السابق",
             "next": "التالي &raquo;"
@@ -72,15 +81,6 @@ export default {
             "email-button-text": "إذا كنت تواجه مشكلة في النقر على الزر \"{actionText}\"، فانسخ عنوان URL الموجود أدناه والصقه\nفي متصفح الويب الخاص بك:\"\"",
             "terms": "الشروط والأحكام",
             "privacy": "سياسة الخصوصية"
-        },
-        "auth": {
-            "failed": "بيانات الدخول هذه غير متطابقة للبيانات المسجلة لدينا.",
-            "password": "كلمة المرور المدخلة غير صحيحة.",
-            "throttle": "لقد تعديت الحد المسموح لعمليات الدخول المتكررة. يرجى المحاولة مرة أخرى بعد {seconds} ثانية.",
-            "login": "الدخول",
-            "create-account": "انشاء حساب",
-            "confirm-password": "تأكيد كلمة المرور",
-            "reset-password": "إعادة تعيين كلمة المرور"
         },
         "validation": {
             "accepted": "يجب قبول الحقل {attribute}",
@@ -264,6 +264,15 @@ export default {
             "token": "This password reset token is invalid.",
             "user": "We can't find a user with that email address."
         },
+        "auth": {
+            "failed": "These credentials do not match our records.",
+            "password": "The provided password is incorrect.",
+            "throttle": "Too many login attempts. Please try again in {seconds} seconds.",
+            "login": "Login",
+            "create-account": "Create account",
+            "confirm-password": "Confirm password",
+            "reset-password": "Reset password"
+        },
         "pagination": {
             "previous": "&laquo; Previous",
             "next": "Next &raquo;"
@@ -324,15 +333,6 @@ export default {
             "email-button-text": "If you're having trouble clicking the \"{actionText}\" button, copy and paste the URL below\ninto your web browser:",
             "terms": "Terms of Service",
             "privacy": "Privacy Policy"
-        },
-        "auth": {
-            "failed": "These credentials do not match our records.",
-            "password": "The provided password is incorrect.",
-            "throttle": "Too many login attempts. Please try again in {seconds} seconds.",
-            "login": "Login",
-            "create-account": "Create account",
-            "confirm-password": "Confirm password",
-            "reset-password": "Reset password"
         },
         "validation": {
             "accepted": "The {attribute} field must be accepted.",
