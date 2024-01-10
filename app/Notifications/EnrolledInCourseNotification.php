@@ -39,7 +39,6 @@ class EnrolledInCourseNotification extends Notification
     {
         return (new MailMessage)
             ->subject(__('words.enrolled-in-course-email-title'))
-            ->bcc('shafiqalshaar@clarastars.com')
             ->markdown('emails.enrolled-in-course', [
                 'course_name' => $this->enroll->course->title,
                 'invoice_url' => route('invoices.show', $this->enroll->invoice->id),

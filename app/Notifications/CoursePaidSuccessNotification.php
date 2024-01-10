@@ -41,7 +41,6 @@ class CoursePaidSuccessNotification extends Notification
     {
         return (new MailMessage)
             ->subject(__('words.success-paid-email-title'))
-            ->bcc('shafiqalshaar@clarastars.com')
             ->markdown('emails.paid-success', [
                 'course_name' => 'ادارة الازامات',
                 'course_name' => $this->invoice->course->title,
