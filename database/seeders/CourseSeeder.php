@@ -67,13 +67,13 @@ class CourseSeeder extends Seeder
                 'title' => 'إدارة المشاريع الاحترافية (®PMP) - دورة معتمدة',
                 'description' => 'دورة PMP هي اختصار لـ Project Management Professional وهي دورة معتمدة لشهادة تقدمها مؤسسة إدارة المشاريع العالمية (PMI) للمحترفين في إدارة المشاريع. وتعد شهادة PMP معيارًا دوليًا مهنيًا معتمدًا لإدارة المشاريع وتعكس معرفة وخبرة ومهارات المتحصل عليها في هذا المجال.',
                 'instructor_name' => 'المستشار / صلاح بن غالب العثمان',
-                'register_starts_at' => Carbon::make('2024-01-07 06:00 PM GMT+3'),
-                'register_ends_at' => Carbon::make('2024-01-11 06:00 PM GMT+3'),
+                'register_starts_at' => now()->subWeek(),
+                'register_ends_at' => now()->addWeek(),
                 'seats_available' => '50',
                 'price' => 1499,
                 'hours' => '35 ساعة',
-                'from_date' => Carbon::make('2024-01-07 05:00 PM GMT+3'),
-                'to_date' => Carbon::make('2024-01-11 09:00 PM GMT+3'),
+                'from_date' => now()->addWeek(),
+                'to_date' => now()->addWeeks(2),
             ],
         ];
 
