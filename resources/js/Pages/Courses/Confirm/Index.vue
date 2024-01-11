@@ -63,7 +63,7 @@
                     </div>
 
                     <div>
-                        <button type="submit" class="btn-grad-secondary">
+                        <button type="submit" class="btn-grad-secondary" :disabled="isLoading">
                             موافق، توجه الى صفحة السداد
                         </button>
                     </div>
@@ -103,6 +103,7 @@ export default {
     props: ['users', 'courses', 'old_courses', 'upcoming_courses', 'course'],
     data() {
         return {
+            isLoading: false,
             form: useForm({
                 name: '',
                 phone: '',
@@ -115,7 +116,16 @@ export default {
     },
     methods: {
         submit() {
-            this.form.post(route('courses.invoices', this.course.id));
+            this.isLoading = true;
+            this.form.post(route('courses.invoices', this.course.id), {
+                preserveScroll: true,
+                onSuccess: () => {
+                    this.isLoading = false;
+                },
+                onError: () => {
+                    this.isLoading = false;
+                },
+            });
         }
     }
 }
