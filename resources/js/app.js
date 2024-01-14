@@ -9,6 +9,13 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import i18n from './i18n.js'
 
+import { createStore } from "vuex";
+import logrocketPlugin from './Store/plugins/logrocket'
+const store = createStore({
+    /* state, actions, mutations */
+    plugins: [logrocketPlugin]
+});
+
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 // import.meta.glob(['../images/**'])
@@ -23,6 +30,7 @@ createInertiaApp({
             .component('InertiaLink', Link)
             .use(ZiggyVue)
             .use(i18n)
+            .use(store)
             .mount(el);
     },
     progress: {

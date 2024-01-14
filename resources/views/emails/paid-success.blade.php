@@ -7,7 +7,7 @@
 <p class="text-center">{{ __('words.in-the-upcoming-course') }}, <span style="color:red;">{{ $course_name }}.</span></p>
 
 <div class="text-center">
-<img src="/img/workmay-net-qr-code.png" width="130px" />
+<img src="{{url('/img/workmay-net-qr-code.png')}}" width="130px" />
 </div>
 
 <table style="width:100%;text-align: center;margin:0 auto;margin-top:20px;">

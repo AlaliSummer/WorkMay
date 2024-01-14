@@ -94,4 +94,18 @@ class User extends Authenticatable
     {
         $this->notify(new ResetPasswordNotification($token));
     }
+
+    public function logrocketId()
+    {
+        return $this->id;
+    }
+
+    public function logrocketIdExtra()
+    {
+        return json_encode([
+            'name' => $this->name,
+            'email' => $this->email,
+        ]);
+    }
+
 }
