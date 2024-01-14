@@ -85,7 +85,7 @@ const logout = () => {
 <!--                                            {{ $t('words.manage-account') }}-->
 <!--                                        </div>-->
 
-                                        <DropdownLink :href="route('my-courses')">
+                                        <DropdownLink :href="route('profile.my-courses')">
                                             دوراتي
                                         </DropdownLink>
 
@@ -168,7 +168,7 @@ const logout = () => {
                         </div>
 
                         <div class="tw-mt-3 tw-space-y-1">
-                            <ResponsiveNavLink :href="route('my-courses')" :active="route().current('my-courses')">
+                            <ResponsiveNavLink :href="route('profile.my-courses')" :active="route().current('profile.my-courses')">
                                 دوراتي
                             </ResponsiveNavLink>
 

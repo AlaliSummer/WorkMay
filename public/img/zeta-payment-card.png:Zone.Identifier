@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/579dd8ed-3bab-4fd6-a6df-bd93e2cfa6e4/zeta-payment-card.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240111%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20240111T081013Z&X-Amz-Expires=86400&X-Amz-Signature=44af92558af43ab37f5d81ef5ed14ee48e7794537a13cdff335d85e17539f01d&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22zeta-payment-card.png%22&response-content-type=image%2Fpng&x-id=GetObject

@@ -53,6 +53,8 @@ class Invoice extends Model
 
     protected $appends = [
         'invoice_qr_image',
+        'number_formatted',
+        'created_at_date',
     ];
 
     protected static function boot(): void
@@ -92,5 +94,18 @@ class Invoice extends Model
             new InvoiceTotalAmount($this->grand_total),
             new InvoiceTaxAmount($this->tax)
         ])->render();
+    }
+
+    public function getNumberFormattedAttribute(): string
+    {
+        return $this->created_at->year
+            . str_pad($this->created_at->month, 2, "0", STR_PAD_LEFT)
+            . "-"
+            . $this->number;
+    }
+
+    public function getCreatedAtDateAttribute(): string
+    {
+        return $this->created_at->toDateString();
     }
 }

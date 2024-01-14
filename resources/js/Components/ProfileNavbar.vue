@@ -85,12 +85,16 @@ const logout = () => {
 <!--                                            {{ $t('words.manage-account') }}-->
 <!--                                        </div>-->
 
-                                        <DropdownLink class="py-1" :href="route('my-courses')">
+                                        <DropdownLink class="py-1" :href="route('profile.show')">
+                                            ملفي
+                                        </DropdownLink>
+
+                                        <DropdownLink class="py-1" :href="route('profile.my-courses')">
                                             دوراتي
                                         </DropdownLink>
 
-                                        <DropdownLink class="py-1" :href="route('profile.show')">
-                                            ملفي
+                                        <DropdownLink class="py-1" :href="route('profile.my-payments')">
+                                            المدفوعات
                                         </DropdownLink>
 
                                         <DropdownLink class="py-1" v-if="$page.props.jetstream.hasApiFeatures" :href="route('api-tokens.index')">
@@ -143,8 +147,11 @@ const logout = () => {
                         <NavLink class="text-white pt-2 pb-3" :href="'/user/profile'" :active="route().current('profile.show')">
                             ملفي الشخصي
                         </NavLink>
-                        <NavLink class="text-white pt-2 pb-3" :href="'/my-courses'" :active="route().current('my-courses')">
+                        <NavLink class="text-white pt-2 pb-3" :href="'/profile/my-courses'" :active="route().current('profile.my-courses')">
                             دوراتي المسجلة
+                        </NavLink>
+                        <NavLink class="text-white pt-2 pb-3" :href="'/profile/my-payments'" :active="route().current('profile.my-payments')">
+                            المدفوعات
                         </NavLink>
                     </div>
                 </div>
@@ -178,7 +185,7 @@ const logout = () => {
                         </div>
 
                         <div class="tw-mt-3 tw-space-y-1">
-                            <ResponsiveNavLink :href="route('my-courses')" :active="route().current('my-courses')">
+                            <ResponsiveNavLink :href="route('profile.my-courses')" :active="route().current('profile.my-courses')">
                                 <p class="tw-text-rose-400 hover:tw-text-gray-800 hover:tw-border-gray-300 focus:tw-outline-none focus:tw-text-gray-800 focus:tw-bg-gray-50 focus:tw-border-gray-300 ">دوراتي</p>
                             </ResponsiveNavLink>
 

@@ -86,7 +86,8 @@ Route::post('noon', [\App\Http\Controllers\NoonController::class, 'storeNoonRece
 Route::get('invoices/{id}/pay-noon', [\App\Http\Controllers\NoonController::class, 'pay'])->name('invoices.noon.pay');
 Route::resource('courses', \App\Http\Controllers\CoursesController::class);
 Route::get('invoices/{id}', [\App\Http\Controllers\CoursesInvoicesController::class, 'show'])->name('invoices.show');
-Route::get('my-courses', [\App\Http\Controllers\MyCoursesController::class, 'Index'])->name('my-courses');
+Route::get('profile/my-courses', [\App\Http\Controllers\MyCoursesController::class, 'Index'])->name('profile.my-courses');
+Route::get('profile/my-payments', [\App\Http\Controllers\MyPaymentsController::class, 'Index'])->name('profile.my-payments');
 
 Route::get('terms', [TermsController::class, 'index'])->name('terms');
 Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy');
