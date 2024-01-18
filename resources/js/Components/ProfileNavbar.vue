@@ -90,7 +90,7 @@ const logout = () => {
                                         </DropdownLink>
 
                                         <DropdownLink class="py-1" :href="route('profile.my-courses')">
-                                            دوراتي
+                                            الدورات
                                         </DropdownLink>
 
                                         <DropdownLink class="py-1" :href="route('profile.my-payments')">
@@ -148,7 +148,7 @@ const logout = () => {
                             ملفي الشخصي
                         </NavLink>
                         <NavLink class="text-white pt-2 pb-3" :href="'/profile/my-courses'" :active="route().current('profile.my-courses')">
-                            دوراتي المسجلة
+                            الدورات
                         </NavLink>
                         <NavLink class="text-white pt-2 pb-3" :href="'/profile/my-payments'" :active="route().current('profile.my-payments')">
                             المدفوعات
