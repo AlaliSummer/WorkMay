@@ -88,6 +88,7 @@ Route::resource('courses', \App\Http\Controllers\CoursesController::class);
 Route::get('invoices/{id}', [\App\Http\Controllers\CoursesInvoicesController::class, 'show'])->name('invoices.show');
 Route::get('profile/my-courses', [\App\Http\Controllers\MyCoursesController::class, 'Index'])->name('profile.my-courses');
 Route::get('profile/my-courses/create', [\App\Http\Controllers\CoursesController::class, 'create'])->name('profile.my-courses.create');
+Route::post('profile/my-courses/create', [\App\Http\Controllers\CoursesController::class, 'store'])->name('profile.my-courses.store');
 Route::get('profile/my-courses/instructor/create', [\App\Http\Controllers\InstructorController::class, 'create'])->name('profile.my-courses.instructor.create');
 Route::post('profile/my-courses/instructor/create', [\App\Http\Controllers\InstructorController::class, 'store'])->name('profile.my-courses.instructor.store');
 Route::get('profile/my-payments', [\App\Http\Controllers\MyPaymentsController::class, 'Index'])->name('profile.my-payments');

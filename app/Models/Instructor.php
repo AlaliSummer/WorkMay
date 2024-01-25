@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Salla\ZATCA\GenerateQrCode;
+use Illuminate\Support\Str;
 
 class Instructor extends Model
 {
@@ -36,7 +37,6 @@ class Instructor extends Model
 
         static::creating(function ($model) {
             $model->{$model->getKeyName()} = (string) Str::uuid();
-            $model->number = MaxNumber::generateForPrefix('INV', 10000);
         });
     }
 

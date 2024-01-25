@@ -3,7 +3,7 @@
     <main>
         <div class="container">
             <div class="px-5 py-4 container-fluid ">
-                <form method="POST">
+                <form @submit.prevent="submitForm(user.id)">
                 <div class="h-100">
                     <h4 class="text-2xl font-weight-semibold pt-6 pb-4" >انشاء دورة جديدة</h4>
                 </div>
@@ -30,46 +30,57 @@
                                     <div class="col-6 my-4">
                                         <label for="title">العنوان</label>
                                         <input type="text" name="title" id="title"
-                                               value="العنوان" class="form-control">
+                                               class="form-control"
+                                               v-model="createCourseForm.title">
                                         <span class="text-danger text-sm"></span>
                                     </div>
                                     <div class="col-6 my-4">
                                         <label for="price">السعر</label>
                                         <input type="text" name="price" id="title"
-                                               value="السعر" class="form-control">
+                                               class="form-control"
+                                               v-model="createCourseForm.price">
                                         <span class="text-danger text-sm"></span>
                                     </div>
                                 </div>
                                 <div class="row p-2">
                                     <label for="description">الوصف</label>
-                                    <textarea name="description" id="description" rows="5" class="form-control">الوصف</textarea>
+                                    <textarea name="description" id="description" rows="5" class="form-control"
+                                              v-model="createCourseForm.description">
+                                        الوصف
+                                    </textarea>
                                 </div>
                                 <div class="row">
                                     <div class="col-6 my-4">
-                                        <label for="register_starts_at">تاريخ بداية الدورة</label>
-                                        <input type="text" name="register_starts_at" id="register_starts_at"
-                                               value="01-01-2024"
-                                               class="form-control">
+                                        <label for="from_date">تاريخ بداية الدورة</label>
+                                        <input type="text" name="from_date" id="from_date"
+                                               placeholder="01-01-2024"
+                                               class="form-control"
+                                               v-model="createCourseForm.from_date">
                                     </div>
 
                                     <div class="col-6 my-4">
-                                        <label for="register_ends_at">تاريخ نهاية الدورة</label>
-                                        <input type="text" name="register_ends_at" id="register_ends_at"
-                                               value="01-01-2024" class="form-control">
+                                        <label for="to_date">تاريخ نهاية الدورة</label>
+                                        <input type="text" name="to_date" id="to_date"
+                                               placeholder="01-01-2024"
+                                               class="form-control"
+                                               v-model="createCourseForm.to_date">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6 my-4">
                                         <label for="seats_available">عدد المقاعد</label>
                                         <input type="text" name="seats_available" id="seats_available"
-                                               value="00"
-                                               class="form-control">
+                                               placeholder="00"
+                                               class="form-control"
+                                               v-model="createCourseForm.seats_available">
                                     </div>
 
                                     <div class="col-6 my-4">
                                         <label for="hours">عدد الساعات</label>
                                         <input type="text" name="hours" id="hours"
-                                               value="00" class="form-control">
+                                               placeholder="00"
+                                               class="form-control"
+                                               v-model="createCourseForm.hours">
                                     </div>
                                 </div>
                                 <div>
@@ -90,6 +101,7 @@
 <script>
 import Navbar from "@/Components/Navbar.vue";
 export default {
+    props: ['user'],
     components: {
         Navbar,
     },
@@ -98,20 +110,22 @@ export default {
             createCourseForm: this.$inertia.form({
                 title: '',
                 description: '',
-                register_starts_at: '',
-                register_ends_at: '',
                 seats_available: '',
                 price: '',
                 hours: '',
+                from_date: '',
+                to_date: '',
             }),
         }
     },
     methods: {
-        createCourse() {
-            this.form.post('/back/courses', {
-                preserveScroll: true
-            });
-        },
+        submitForm(userId) {
+            this.createCourseForm.post(route('profile.my-courses.store',
+                {
+                    user_id: userId
+                }
+            ));
+        }
     }
 }
 </script>

@@ -28,13 +28,13 @@ class InstructorController extends Controller
             'identity_number' => ['required'],
             'phone' => ['required', 'string', 'max:255', 'unique:users'],
         ]);
-        
+
         $instructor = Instructor::create([
             'user_id' => auth()->user()->id,
             'identity_number' => $request->identity_number,
             'phone' => $request->phone,
         ]);
-        dd('after create');
+
         return redirect()->route('profile.my-courses');
     }
 }

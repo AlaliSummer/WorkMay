@@ -17,6 +17,8 @@ class Course extends Model
     protected $perPage = 50;
 
     protected $fillable = [
+        'user_id',
+        'instructor_id',
         'title',
         'description',
         'register_starts_at',
@@ -47,9 +49,14 @@ class Course extends Model
         });
     }
 
-    public function users()
+    public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
+    }
+
+    public function instructor()
+    {
+        return $this->belongsTo(Instructor::class);
     }
 
     public function invoices()

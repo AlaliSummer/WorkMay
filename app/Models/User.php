@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Instructor;
 use App\Notifications\ResetPasswordNotification;
 use Faker\Provider\Company;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -84,6 +85,11 @@ class User extends Authenticatable
     public function invoices()
     {
         return $this->hasMany(Invoice::class);
+    }
+
+    public function instructor()
+    {
+        return $this->hasOne(Instructor::class);
     }
 
     /**

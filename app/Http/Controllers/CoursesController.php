@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Enrollment;
+use App\Models\Instructor;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -17,7 +18,8 @@ class CoursesController extends Controller
         $upcoming_courses = Course::where('from_date', '>', now())->paginate(10);
 
         return Inertia::render('Courses/Index',
-            ['courses' => Course::latest()->paginate(10),
+            [
+                'courses' => Course::latest()->paginate(10),
                 'old_courses' => $old_courses,
                 'upcoming_courses' => $upcoming_courses]);
     }
@@ -46,21 +48,25 @@ class CoursesController extends Controller
 
     public function create()
     {
-        return Inertia::render('Profile/MyCourses/Create');
+        return Inertia::render('Profile/MyCourses/Create', [
+            'user' => auth()->user()->id,
+        ]);
     }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'user_id' => 'nullable|exists:users,id',
+            'instructor_id' => 'nullable|exists:instructors,id',
             'title' => 'required|string|max:255',
             'description' => 'required|string|max:255',
             'register_starts_at' => [
-                'required',
+                'nullable',
                 'date',
                 'before:to_date'
             ],
             'register_ends_at' => [
-                'required',
+                'nullable',
                 'date',
                 'after:from_date'
             ],
@@ -82,9 +88,21 @@ class CoursesController extends Controller
         ]);
 
         $user_id = auth()->user()->id;
-        $course = Course::create($validated);
+        $instructor = Instructor::where('user_id', $user_id)->first();
 
-        return redirect()->route('dashboard');
+        $course = Course::create([
+            'user_id' => $user_id,
+            'instructor_id' => $instructor->id,
+            'title' => $request->title,
+            'description' => $request->description,
+            'seats_available' => $request->seats_available,
+            'price' => $request->grand_total,
+            'hours' => $request->hours,
+            'from_date' => $request->from_date,
+            'to_date' => $request->to_date,
+        ]);
+
+        return redirect()->route('profile.my-courses');
     }
 
     public function Enrollment($course_id)
