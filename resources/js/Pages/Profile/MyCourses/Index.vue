@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <hr class="horizontal mb-4 dark mt-4">
-                <div class="row">
+                <div class="row" v-if="instructor.courses">
                     <div class="d-flex">
                         <div class="col-12">
                             <div>
@@ -93,6 +93,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div v-else class="mb-6">
+                    <center>
+                        <img src="/img/cat.gif" alt="Logo" class="w-25 tw-self-center">
+                        <h4>لا يوجد دورات</h4>
+                        <p>قم انشاء دوراتك الخاصة واطلاقها الان</p>
+                    </center>
                 </div>
             </div>
             <div class="container">
@@ -155,10 +162,11 @@
                         </div>
                     </div>
                 </div>
-                <div v-else class="my-6">
+                <div v-else class="mb-6 tw-relative">
                     <center>
-                        <img src="/img/neon-can-of-paint.png" alt="Logo" class="w-7 mt-7 tw-self-center">
-                        <h4 class="pt-4">لا يوجد دورات</h4>
+                        <img src="/img/cat.gif" alt="Logo" class="w-25 tw-self-center">
+                        <img src="/img/cat.gif" alt="Logo" class="w-25 tw-self-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <h4>لا يوجد دورات</h4>
                         <p>قم بالتسجيل في افضل الدورات المقدمة على منصتنا</p>
                     </center>
                 </div>
